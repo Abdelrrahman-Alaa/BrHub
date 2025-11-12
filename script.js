@@ -112,7 +112,7 @@ products.forEach((p) => {
           <p class="text-gray-500 text-xs">${p.desc}</p>
         </div>
         <button
-          class="mt-4 bg-blue-900 text-white text-sm font-semibold py-2 rounded-lg hover:bg-blue-800 transition"
+          class="mt-4 bg-blue-900 text-white text-sm font-semibold py-2 rounded-lg hover:cursor-pointer hover:bg-blue-800 transition"
         >
           Send request
           </button>

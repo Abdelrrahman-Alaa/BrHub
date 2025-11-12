@@ -4,6 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="./output.css" rel="stylesheet" />
+    <style>
+      /* Custom styles for the rotated year text, as pure Tailwind doesn't support arbitrary rotation */
+      .rotate-year {
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        left: -2.5rem; /* Adjust to position correctly */
+        top: 0;
+      }
+      /* Custom styles for the dotted line, as Tailwind's border-dashed is too thick */
+      .timeline-line {
+        border-top: 2px dotted #d1d5db; /* Light gray dotted line */
+      }
+    </style>
     <title>BrHub</title>
   </head>
   <body class="text-gray-800 font-sans">
@@ -482,7 +495,7 @@
         </p>
         <a
           href="#"
-          class="inline-block bg-[#00235B] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-gray-200 transition"
+          class="inline-block bg-[#00235B] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 transition"
         >
           Explore More
         </a>
@@ -727,7 +740,7 @@
           </h1>
 
           <!-- Divider Line -->
-          <img src="./assets/SVG.svg" alt="" />
+          <img src="./assets/blue.svg" alt="" />
 
           <!-- Description -->
           <p class="text-gray-600 text-lg leading-relaxed">
@@ -861,7 +874,7 @@
           <div class="pt-4">
             <a
               href="#"
-              class="inline-block bg-[#04275E] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-gray-200 transition"
+              class="inline-block bg-[#04275E] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 transition"
             >
               Read More
             </a>
@@ -871,7 +884,7 @@
     </section>
 
     <!-- Metrics -->
-    <div class="p-8 min-h-screen">
+    <div class="p-16">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <!-- Left Side - Bar Chart -->
@@ -1235,7 +1248,1043 @@
     </div>
 
     <!-- Pricing -->
-    
+    <div class="bg-[#F1F1F1] py-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Free Plan -->
+          <div
+            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col justify-between"
+          >
+            <h2 class="text-2xl font-bold mb-2">Free</h2>
+            <p class="text-gray-200 mb-6 text-sm">
+              Everything you need to supercharge your productivity.
+            </p>
+
+            <div class="mb-8">
+              <span class="text-6xl font-bold">$0</span>
+              <span class="text-gray-200 text-lg">/ month</span>
+            </div>
+
+            <div class="border-t border-green-600 pt-6 mb-6">
+              <h3 class="text-xl font-semibold mb-4">What's included</h3>
+              <ul class="text-gray-200 space-y-2 text-sm">
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Analytics
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  100 Api Calls
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Api Access
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  10 Max Images
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  1 Storage Gb
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Export Data
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  5 Max Products
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  1 Team Members
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Custom Branding
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Priority Support
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="w-full bg-white text-black font-semibold py-3 rounded-lg hover:cursor-pointer hover:bg-gray-100 transition"
+            >
+              Select Plan
+            </button>
+          </div>
+
+          <!-- Premium Plus Plan -->
+          <div
+            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col justify-between"
+          >
+            <h2 class="text-3xl font-bold mb-2">Premium Plus</h2>
+            <p class="text-gray-200 mb-6 text-sm">
+              Uget the highest level of service on BRMUB — unlimited lead
+              credits, featured placements, unlimited product listings.
+            </p>
+
+            <div class="mb-2">
+              <span class="text-6xl font-bold">$80</span>
+              <span class="text-gray-200 text-lg">/ month</span>
+              <span
+                class="bg-[#FF6363] text-black text-xs px-2 py-1 rounded-full ml-2"
+                >-20%</span
+              >
+            </div>
+            <div class="flex items-center justify-center">
+              <p
+                class="inline-block text-gray-200 text-sm mb-6 outline outline-2 outline-green-700 p-2 rounded-lg"
+              >
+                $96 billed annually
+              </p>
+            </div>
+
+            <div class="border-t border-green-600 pt-6 mb-6">
+              <h3 class="text-xl font-semibold mb-4">What's included</h3>
+              <ul class="text-gray-200 space-y-2 text-sm">
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Analytics
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Api Access
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  10 Max Images
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Export Data
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  1 Team Members
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Custom Branding
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Priority Support
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="mb-4 flex items-center gap-2 p-4 outline outline-green-700 rounded-lg"
+            >
+              <input type="checkbox" id="gpt4-plus" class="w-4 h-4" />
+              <label for="gpt4-plus" class="text-sm">Include GPT-4</label>
+              <span class="text-xs text-gray-200 ml-auto">+ $8 / month</span>
+            </div>
+
+            <button
+              class="w-full bg-white text-black font-semibold py-3 rounded-lg hover:cursor-pointer hover:bg-gray-100 transition"
+            >
+              Select Plan
+            </button>
+          </div>
+
+          <!-- Premium Pro Plan -->
+          <div
+            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col justify-between"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <h2 class="text-2xl font-bold">Premium</h2>
+              <span
+                class="bg-linear-to-r from-[#FF5B37] to-[#AB0052] text-white text-xs px-2 py-1 rounded-full"
+                >pro</span
+              >
+            </div>
+            <p class="text-gray-200 mb-6 text-sm">
+              Boost your profile with priority listing, additional product
+              slots, and a monthly pack of RFQ credits to respond to buyers.
+            </p>
+
+            <div class="mb-2">
+              <span class="text-6xl font-bold">$12</span>
+              <span class="text-gray-200 text-lg">/ month</span>
+              <span
+                class="bg-[#FF6363] text-black text-xs px-2 py-1 rounded-full ml-2"
+                >-20%</span
+              >
+              <div class="text-gray-200 text-sm">/ user</div>
+            </div>
+            <div class="flex items-center justify-center">
+              <p
+                class="inline-block text-gray-200 text-sm mb-6 outline outline-2 outline-green-700 p-2 rounded-lg"
+              >
+                $144 billed annually
+              </p>
+            </div>
+            <div class="border-t border-green-600 pt-6 mb-6">
+              <h3 class="text-xl font-semibold mb-4">What's included</h3>
+              <ul class="text-gray-200 space-y-2 text-sm">
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Analytics
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Api Access
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  10 Max Images
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Export Data
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  1 Team Members
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Custom Branding
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Priority Support
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="mb-4 flex items-center gap-2 p-4 outline outline-green-700 rounded-lg"
+            >
+              <input type="checkbox" id="gpt4-pro" class="w-4 h-4" />
+              <label for="gpt4-pro" class="text-sm">Include GPT-4</label>
+              <span class="text-xs text-gray-200 ml-auto">+ $8 / month</span>
+            </div>
+
+            <button
+              class="w-full bg-white text-black font-semibold py-3 rounded-lg hover:cursor-pointer hover:bg-gray-100 transition"
+            >
+              Select Plan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brands -->
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <p class="text-gray-500 text-sm mb-2">Our Global</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Distribution Associates
+        </h2>
+        <div class="flex justify-center">
+          <img src="./assets/orange.svg" alt="" />
+        </div>
+      </div>
+
+      <!-- Logos Grid -->
+      <div class="">
+        <div class="flex max-w-3xl items-center justify-center mx-auto gap-16">
+          <img
+            src="./assets/logos/mihovu.svg"
+            alt="Brand 1"
+            class="object-contain"
+          />
+          <img
+            src="./assets/logos/hilmint.svg"
+            alt="Brand 2"
+            class="object-contain"
+          />
+          <img
+            src="./assets/logos/rockorn.svg"
+            alt="Brand 3"
+            class="object-contain"
+          />
+        </div>
+        <div class="flex max-w-3xl items-center justify-center mx-auto gap-16">
+          <img
+            src="./assets/logos/fedex.svg"
+            alt="Brand 1"
+            class="object-contain"
+          />
+          <img
+            src="./assets/logos/dpex.svg"
+            alt="Brand 2"
+            class="object-contain"
+          />
+          <img
+            src="./assets/logos/daf.svg"
+            alt="Brand 3"
+            class="object-contain"
+          />
+          <img
+            src="./assets/logos/iveco.svg"
+            alt="Brand 3"
+            class="object-contain"
+          />
+        </div>
+        <div class="flex max-w-3xl items-center justify-center mx-auto gap-16">
+          <img
+            src="./assets/logos/purolator.svg"
+            alt="Brand 1"
+            class="object-contain"
+          />
+          <img
+            src="./assets/logos/glovo.svg"
+            alt="Brand 2"
+            class="object-contain"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Foreign Trade -->
+    <div class="bg-[#F1F1F1]">
+      <div class="max-w-7xl mx-auto px-4 py-16">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-light text-[#04275E] mb-3">
+            Digital solutions for
+            <span class="font-bold">Foreign Trade</span>
+          </h2>
+          <p class="text-[#2A3E50] text-sm md:text-base">
+            Our solutions help thousands of companies grow in the
+            <span class="font-bold"> international market. </span>
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1: Leads Central -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-center items-center text-center hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 class="text-xl font-bold text-[#2A3E50 ] mb-3">
+              Leads Central
+            </h3>
+            <p class="text-gray-600 text-xs mb-6 flex-grow">
+              Post buying requests, manage incoming quotatioand centralize all
+              sales offers from verified suppliers. Simplify supplier selection
+              with organized leads, message history, and downloadable quotes.
+            </p>
+            <button
+              class="bg-[#04275E] text-white font-semibold px-3 py-2 rounded hover:bg-blue-800 transition-colors duration-300 text-xs"
+            >
+              ACCESS NEW OPPORTUNITIES
+            </button>
+          </div>
+
+          <!-- Card 2: BRMUB Academy -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-center items-center text-center hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 class="text-xl font-bold text-[#2A3E50 ] mb-3">
+              BRMUB Academy
+            </h3>
+            <p class="text-gray-600 text-xs flex-grow">
+              Access articles, guides, webinars, and podcasts on exporting,
+              compliance, market entry, and negotiation. Learn best practices to
+              optimize sourcing, pricing, and logistics.
+            </p>
+            <button
+              class="bg-[#04275E] text-white font-semibold px-3 py-2 rounded hover:bg-blue-800 transition-colors duration-300 text-xs"
+            >
+              VISIT OUR KNOWLEDGE PORTAL
+            </button>
+          </div>
+
+          <!-- Card 3: BRMUB Freight -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-center items-center text-center hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 class="text-xl font-bold text-[#2A3E50 ] mb-3">
+              BRMUB Freight
+            </h3>
+            <p class="text-gray-600 text-xs flex-grow">
+              Quote and book international sea, air, and multimodal freight
+              quickly and securely. Transparent pricing, shipment tracking, and
+              end-to-end support to keep your cargo on schedule.
+            </p>
+            <button
+              class="bg-[#04275E] text-white font-semibold px-3 py-2 rounded hover:bg-blue-800 transition-colors duration-300 text-xs"
+            >
+              GET YOUR FREIGHT QUOTE NOW
+            </button>
+          </div>
+
+          <!-- Card 4: BRMUB TradeCenter -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-center items-center text-center hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 class="text-xl font-bold text-[#2A3E50 ] mb-3">
+              BRMUB TradeCenter
+            </h3>
+            <p class="text-gray-600 text-xs flex-grow">
+              Specialist team support for market entry, certification, label and
+              ingredient review, and regulatory compliance in the USA, EU, and
+              Brazil. Reduce export risk with expert guidance.
+            </p>
+            <button
+              class="bg-[#04275E] text-white font-semibold px-3 py-2 rounded hover:bg-blue-800 transition-colors duration-300 text-xs"
+            >
+              DISCOVER OUR SOLUTIONS
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="my-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <!-- Header -->
+        <div
+          class="mx-auto max-w-7xl sm:text-center mb-14 flex flex-col items-center"
+        >
+          <p class="mt-2">We Expertise In Logistics</p>
+          <p class="mt-2 text-3xl text-center leading-8 font-bold">
+            Cutting-Edge <br />
+            Transportation & Logistics <br />
+            Technologies
+          </p>
+          <img class="mt-6" src="./assets/green.svg" alt="" />
+        </div>
+
+        <!-- Timeline -->
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-5"
+        >
+          <div>
+            <!-- Dot and Line -->
+            <div
+              class="flex items-center text-sm font-semibold leading-6 text-[#04275E]"
+            >
+              <svg
+                viewBox="0 0 4 4"
+                class="mr-4 h-4 w-4 flex-none"
+                aria-hidden="true"
+              >
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </svg>
+
+              <div
+                class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-500/80 sm:-ml-4 lg:static lg:-mr-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                aria-hidden="true"
+              ></div>
+            </div>
+            <!-- Icon -->
+            <div class="flex items-start">
+              <!-- Year -->
+              <span
+                class="text-[#04275E] font-bold text-3xl rotate-180 writing-mode-vertical-lr mt-6 mr-4"
+              >
+                1990
+              </span>
+
+              <!-- content -->
+              <div>
+                <div class="mt-2 p-2 bg-[#04275E] rounded-full w-fit">
+                  <img src="./assets/svg/1.svg" alt="" />
+                </div>
+
+                <p class="mt-2 text-lg font-bold text-[#111111] tracking-wide">
+                  Initial Investment
+                </p>
+
+                <p class="mt-1 text-[#111111]">
+                  Phasellus hac vehicula augue in cursus potenti habitass aptent
+                  nostra sit aptent.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- Dot and Line -->
+            <div
+              class="flex items-center text-sm font-semibold leading-6 text-[#04275E]"
+            >
+              <svg
+                viewBox="0 0 4 4"
+                class="mr-4 h-4 w-4 flex-none"
+                aria-hidden="true"
+              >
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </svg>
+
+              <div
+                class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-500/80 sm:-ml-4 lg:static lg:-mr-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                aria-hidden="true"
+              ></div>
+            </div>
+            <!-- Icon -->
+            <div class="flex items-start">
+              <!-- Year -->
+              <span
+                class="text-outline-black font-bold text-3xl rotate-180 writing-mode-vertical-lr mt-6 mr-4"
+              >
+                2002
+              </span>
+
+              <!-- content -->
+              <div>
+                <div class="mt-2 p-2 bg-[#04275E] rounded-full w-fit">
+                  <img src="./assets/svg/2.svg" alt="" />
+                </div>
+
+                <p class="mt-2 text-lg font-bold text-[#111111]">
+                  Implemented Software
+                </p>
+
+                <p class="mt-1 text-base text-[#111111]">
+                  Sapien penatibus lectus massa duis maecenas non dictum
+                  vestibulum varius.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- Dot and Line -->
+            <div
+              class="flex items-center text-sm font-semibold leading-6 text-[#04275E]"
+            >
+              <svg
+                viewBox="0 0 4 4"
+                class="mr-4 h-4 w-4 flex-none"
+                aria-hidden="true"
+              >
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </svg>
+
+              <div
+                class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-500/80 sm:-ml-4 lg:static lg:-mr-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                aria-hidden="true"
+              ></div>
+            </div>
+            <!-- Icon -->
+            <div class="flex items-start">
+              <!-- Year -->
+              <span
+                class="text-outline-black font-bold text-3xl rotate-180 writing-mode-vertical-lr mt-6 mr-4"
+              >
+                2008
+              </span>
+
+              <!-- content -->
+              <div>
+                <div class="mt-2 p-2 bg-[#04275E] rounded-full w-fit">
+                  <img src="./assets/svg/3.svg" alt="" />
+                </div>
+
+                <p class="mt-2 text-lg font-bold text-[#111111]">
+                  Market Leadership
+                </p>
+
+                <p class="mt-1 text-base text-[#111111]">
+                  Commodo et rutrum mollis enim imperdiet ipsum senectus
+                  egestas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- Dot and Line -->
+            <div
+              class="flex items-center text-sm font-semibold leading-6 text-[#04275E]"
+            >
+              <svg
+                viewBox="0 0 4 4"
+                class="mr-4 h-4 w-4 flex-none"
+                aria-hidden="true"
+              >
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </svg>
+
+              <div
+                class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-500/80 sm:-ml-4 lg:static lg:-mr-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                aria-hidden="true"
+              ></div>
+            </div>
+            <!-- Icon -->
+            <div class="flex items-start">
+              <!-- Year -->
+              <span
+                class="text-outline-black font-bold text-3xl rotate-180 writing-mode-vertical-lr mt-6 mr-4"
+              >
+                2015
+              </span>
+
+              <!-- content -->
+              <div>
+                <div class="mt-2 p-2 bg-[#04275E] rounded-full w-fit">
+                  <img src="./assets/svg/4.svg" alt="" />
+                </div>
+
+                <p class="mt-2 text-lg font-bold text-[#111111]">
+                  Digital Transformation
+                </p>
+
+                <p class="mt-1 text-base text-[#111111]">
+                  Vestibulum etiam molestie augue risus dictumst taciti.
+                  Senectus velit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- Dot and Line -->
+            <div
+              class="flex items-center text-sm font-semibold leading-6 text-[#04275E]"
+            >
+              <svg
+                viewBox="0 0 4 4"
+                class="mr-4 h-4 w-4 flex-none"
+                aria-hidden="true"
+              >
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </svg>
+
+              <div
+                class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-500/80 sm:-ml-4 lg:static lg:-mr-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                aria-hidden="true"
+              ></div>
+            </div>
+            <!-- Icon -->
+            <div class="flex items-start">
+              <!-- Year -->
+              <span
+                class="text-outline-black font-bold text-3xl rotate-180 writing-mode-vertical-lr mt-6 mr-4"
+              >
+                2022
+              </span>
+
+              <!-- content -->
+              <div>
+                <div class="mt-2 p-2 bg-[#04275E] rounded-full w-fit">
+                  <img src="./assets/svg/5.svg" alt="" />
+                </div>
+
+                <p class="mt-2 text-lg font-bold text-[#111111]">
+                  Global Brand
+                </p>
+
+                <p class="mt-1 text-base text-[#111111]">
+                  Senectus velit dignissim duis turpis. Vestibulum etiam
+                  molestie augue risu.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <section
+      class="bg-[#B3B3B3]/50 bg-[url('./assets/zoomed-map.png')] bg-cover bg-center bg-no-repeat py-20 relative overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 px-6"
+      >
+        <!-- Left Content -->
+        <div class="space-y-6">
+          <p class="text-[#082D38] font-medium">Our Location</p>
+
+          <h2 class="text-4xl font-extrabold text-[#082D38] leading-tight">
+            Leader In Supply Chain <br />
+            Storage & Distribution
+          </h2>
+
+          <!-- Divider Line -->
+          <img src="./assets/blue.svg" alt="" />
+
+          <p class="text-gray-600 leading-relaxed max-w-md">
+            Erat mollis iaculis diam ornare nisl. Bibendum mauris vel
+            suspendisse posuere posuere montes. Non porttitor condimentum porta
+            malesuada.
+          </p>
+
+          <!-- Form -->
+          <form class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Enter Your Name"
+                class="border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-[#048C4C]"
+              />
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                class="border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-[#048C4C]"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <select
+                class="border rounded-md p-3 w-full text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#048C4C]"
+              >
+                <option>Moving From</option>
+              </select>
+              <select
+                class="border rounded-md p-3 w-full text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#048C4C]"
+              >
+                <option>Moving To</option>
+              </select>
+            </div>
+
+            <textarea
+              rows="3"
+              placeholder="Message Here"
+              class="border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-[#048C4C]"
+            ></textarea>
+
+            <div class="pt-4">
+              <a
+                href="#"
+                class="inline-block bg-[#04275E] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 transition"
+              >
+                Request Quote
+              </a>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right Image -->
+        <div class="flex justify-center relative">
+          <img
+            src="./assets/man.png"
+            alt="Saudi man with laptop"
+            class="w-full object-contain z-10"
+          />
+          <div
+            class="absolute inset-0 bg-[url('./assets/img/map-bg.png')] bg-cover bg-center opacity-10 -z-10"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="relative text-white pt-16 overflow-hidden mt-36">
+      <!-- Background image -->
+      <div
+        class="absolute inset-0 bg-[url('./assets/truck.png')] bg-cover bg-center"
+      ></div>
+
+      <!-- Form -->
+      <div
+        class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-10 px-6"
+      >
+        <!-- Left Side -->
+        <div class="space-y-6 lg:col-span-6">
+          <div class="flex justify-between items-center">
+            <h3 class="text-3xl text-gray-300 font-medium">
+              Subscribe Logi ...
+            </h3>
+            <div
+              class="flex items-center border border-gray-400 bg-white rounded-sm w-fit overflow-hidden"
+            >
+              <input
+                type="email"
+                placeholder="Enter your mail id"
+                class="px-4 py-2 text-gray-800 w-64 focus:outline-none"
+              />
+              <button
+                class="px-4 py-2 hover:bg-[#048C4C] hover:cursor-pointer transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="black"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- Divider Line -->
+          <img src="./assets/blue.svg" alt="" />
+
+          <div class="border-t border-gray-500/50 pt-6">
+            <div class="flex justify-between items-center">
+              <img src="./assets/logo.png" alt="Logo" class="h-10 mb-3" />
+              <div class="flex space-x-6">
+                <a class="" href="#">About Us</a>
+                <a class="" href="#">Services & Tools</a>
+                <a class="" href="#">Leads Central</a>
+              </div>
+            </div>
+
+            <h2 class="text-3xl font-bold leading-snug">
+              We Ship Worldwide <br />
+              Without Borders
+            </h2>
+
+            <a
+              href="#"
+              class="inline-flex gap-2 items-center justify-center mt-4"
+            >
+              Discover <img src="./assets/svg/arrow.svg" alt="arrow" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <div
+          class="bg-white text-[#0C203B] rounded-sm shadow-xl p-8 space-y-6 lg:col-span-4"
+        >
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-1">Your Name:</label>
+              <input
+                type="text"
+                placeholder="Name"
+                class="border-b border-gray-300 w-full p-1 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1">Phone No:</label>
+              <input
+                type="text"
+                placeholder="Mobile No"
+                class="border-b border-gray-300 w-full p-1 focus:outline-none"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-1"
+                >Freight Type:</label
+              >
+              <select
+                class="border-b border-gray-300 w-full p-1 focus:outline-none text-gray-500"
+              >
+                <option>Air Freight</option>
+                <option>Sea Freight</option>
+                <option>Land Freight</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1">Load:</label>
+              <input
+                type="text"
+                placeholder="Road"
+                class="border-b border-gray-300 w-full p-1 focus:outline-none"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-1">Message:</label>
+            <textarea
+              rows="3"
+              placeholder="Your Message"
+              class="border-b border-gray-300 w-full p-1 focus:outline-none resize-none"
+            ></textarea>
+          </div>
+
+          <div class="pt-4">
+            <a
+              href="#"
+              class="inline-block bg-[#04275E] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 transition"
+            >
+              Submit Request
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer icons -->
+
+      <div
+        class="relative max-w-7xl mx-auto mt-10 p-6 flex justify-between items-center space-x-4 border-t border-gray-500 text-white"
+      >
+        <p class="text-sm text-gray-400 mt4">All Right Reserved © 2024</p>
+        <div class="flex items-center gap-4">
+          <span class="text-sm text-gray-300">Social Media :</span>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C]"
+            ><img src="./assets/svg/facebook.svg" alt="facebook"
+          /></a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C]"
+            ><img src="./assets/svg/x.svg" alt="x"
+          /></a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C]"
+            ><img src="./assets/svg/instagram.svg" alt="instagram"
+          /></a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C]"
+            ><img src="./assets/svg/linked-in.svg" alt="linked-in"
+          /></a>
+        </div>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>

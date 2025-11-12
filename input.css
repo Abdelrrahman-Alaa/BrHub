@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.writing-mode-vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.text-outline-black {
+  -webkit-text-stroke: 1px #111;
+  color: transparent;
+}
