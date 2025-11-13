@@ -121,6 +121,7 @@ products.forEach((p) => {
   container.innerHTML += card;
 });
 
+// Function to switch tabs
 function switchTab(tabName, button) {
   const allTabs = document.querySelectorAll(".tab-content");
   const allButtons = document.querySelectorAll(".tab-button");
@@ -139,3 +140,21 @@ function switchTab(tabName, button) {
 
   button.classList.add("text-green-500");
 }
+
+// Sticky navbar with scroll effect
+const navbar = document.getElementById("navbar");
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > 36) {
+    navbar.classList.remove("transparent", "top-[36px]", "absolute");
+    navbar.classList.add("scrolled", "fixed", "top-0");
+  } else {
+    navbar.classList.remove("scrolled", "fixed", "top-0");
+    navbar.classList.add("transparent", "top-[36px]", "absolute");
+  }
+
+  lastScroll = currentScroll;
+});

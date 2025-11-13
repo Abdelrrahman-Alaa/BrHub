@@ -8,3 +8,18 @@
   -webkit-text-stroke: 1px #111;
   color: transparent;
 }
+
+nav {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Initial transparent state */
+nav.transparent {
+  background-color: transparent;
+}
+
+/* Scrolled state with black background */
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.50);
+  backdrop-filter: blur(10px);
+}
