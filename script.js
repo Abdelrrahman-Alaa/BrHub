@@ -95,7 +95,7 @@ products.forEach((p) => {
             >REQUESTED</span
           >
           <div
-            class="bg-[#00235B] rounded-xl h-20 w-full rounded-xl mt-12"
+            class="bg-[#00235B] h-20 w-full rounded-xl mt-12"
           ></div>
           <img
             src="${p.image}"
