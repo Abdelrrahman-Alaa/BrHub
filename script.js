@@ -149,11 +149,11 @@ window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > 36) {
-    navbar.classList.remove("transparent", "top-[36px]", "absolute");
+    navbar.classList.remove("transparent", "top-9", "absolute");
     navbar.classList.add("scrolled", "fixed", "top-0");
   } else {
     navbar.classList.remove("scrolled", "fixed", "top-0");
-    navbar.classList.add("transparent", "top-[36px]", "absolute");
+    navbar.classList.add("transparent", "top-9", "absolute");
   }
 
   lastScroll = currentScroll;
