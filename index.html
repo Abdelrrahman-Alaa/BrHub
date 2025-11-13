@@ -20,7 +20,8 @@
     <title>BrHub</title>
   </head>
   <body class="text-gray-800 font-sans">
-    <div class="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-sm">
+    <!-- Navbar -->
+    <div class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
       <!-- Top Bar -->
       <div class="text-white text-sm">
         <div
@@ -104,7 +105,551 @@
             </div>
 
             <ul class="hidden md:flex items-center gap-10">
-              <li><a href="#" class="hover:text-green-400">Home +</a></li>
+              <li class="relative group">
+                <a
+                  href="#"
+                  class="hover:text-green-400 flex items-center gap-1"
+                >
+                  Home
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </a>
+
+                <!-- Dropdown Menu -->
+                <div
+                  class="text-black absolute top-full left-0 mt-2 bg-white shadow-2xl rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 -translate-y-2 group-hover:translate-y-0"
+                  style="width: 800px"
+                >
+                  <div class="p-6">
+                    <!-- Tabs -->
+                    <div class="flex gap-4 border-b mb-6">
+                      <button
+                        onclick="switchTab('products', this)"
+                        class="tab-button pb-3 px-6 font-semibold hover:cursor-pointer hover:text-green-500 text-green-500"
+                      >
+                        Products
+                      </button>
+                      <button
+                        onclick="switchTab('services', this)"
+                        class="tab-button pb-3 px-6 font-semibold hover:cursor-pointer hover:text-green-500"
+                      >
+                        Services
+                      </button>
+                      <button
+                        onclick="switchTab('investors', this)"
+                        class="tab-button pb-3 px-6 font-semibold hover:cursor-pointer hover:text-green-500"
+                      >
+                        Investors
+                      </button>
+                      <a
+                        href="/leadscentral"
+                        target="_blank"
+                        class="ml-auto text-green-500 hover:text-green-600 font-semibold"
+                      >
+                        Go to Leads Central →
+                      </a>
+                    </div>
+
+                    <!-- Products Content -->
+                    <div
+                      id="products-tab"
+                      class="tab-content grid grid-cols-3 gap-4 max-h-96 overflow-y-auto"
+                    >
+                      <a
+                        href="/activities-sports-and-entertainment"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5505-aH4uwG7d0dea66.svg"
+                          width="24"
+                          height="24"
+                          alt="Activities"
+                        />
+                        <span class="text-sm"
+                          >Activities, Sports & Entertainment</span
+                        >
+                      </a>
+                      <a
+                        href="/agricultural-machinery"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-6355-aH4uwGb5cf56a9.svg"
+                          width="24"
+                          height="24"
+                          alt="Agricultural"
+                        />
+                        <span class="text-sm">Agricultural Machinery</span>
+                      </a>
+                      <a
+                        href="/agriculture"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5953-aH4uwG82a20f8c.svg"
+                          width="24"
+                          height="24"
+                          alt="Agriculture"
+                        />
+                        <span class="text-sm">Agriculture</span>
+                      </a>
+                      <a
+                        href="/animals"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5488-aH4uwGb6e56d03.svg"
+                          width="24"
+                          height="24"
+                          alt="Animals"
+                        />
+                        <span class="text-sm">Animals</span>
+                      </a>
+                      <a
+                        href="/apparel-and-fashion"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5346-aH4uwGbd6404ed.svg"
+                          width="24"
+                          height="24"
+                          alt="Apparel"
+                        />
+                        <span class="text-sm">Apparel & Fashion</span>
+                      </a>
+                      <a
+                        href="/arts-crafts-and-gifts"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5368-aH4uwG65d9d22a.svg"
+                          width="24"
+                          height="24"
+                          alt="Arts"
+                        />
+                        <span class="text-sm">Arts, Crafts & Gifts</span>
+                      </a>
+                      <a
+                        href="/audio-visual-products"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5952-aH4uwGcb3d99a8.svg"
+                          width="24"
+                          height="24"
+                          alt="Audio"
+                        />
+                        <span class="text-sm">Audio-Visual Products</span>
+                      </a>
+                      <a
+                        href="/bags-and-accessories"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5956-aH4uwGe1969c24.svg"
+                          width="24"
+                          height="24"
+                          alt="Bags"
+                        />
+                        <span class="text-sm">Bags & Accessories</span>
+                      </a>
+                      <a
+                        href="/beauty-and-personal-care"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5959-aH4uwG3dc5971d.svg"
+                          width="24"
+                          height="24"
+                          alt="Beauty"
+                        />
+                        <span class="text-sm">Beauty & Personal Care</span>
+                      </a>
+                      <a
+                        href="/beverage"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-6133-aH4uwGcaee2817.svg"
+                          width="24"
+                          height="24"
+                          alt="Beverage"
+                        />
+                        <span class="text-sm">Beverage</span>
+                      </a>
+                      <a
+                        href="/building-and-electrical"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5384-aH4uwG197b0c97.svg"
+                          width="24"
+                          height="24"
+                          alt="Building"
+                        />
+                        <span class="text-sm">Building & Electrical</span>
+                      </a>
+                      <a
+                        href="/coffee"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-6250-aH4uwG731d41d7.svg"
+                          width="24"
+                          height="24"
+                          alt="Coffee"
+                        />
+                        <span class="text-sm">Coffee</span>
+                      </a>
+                      <a
+                        href="/food"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5322-aH4uwG13493262.svg"
+                          width="24"
+                          height="24"
+                          alt="Food"
+                        />
+                        <span class="text-sm">Food</span>
+                      </a>
+                      <a
+                        href="/furniture"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5957-aH4uwG3e3714d6.svg"
+                          width="24"
+                          height="24"
+                          alt="Furniture"
+                        />
+                        <span class="text-sm">Furniture</span>
+                      </a>
+                      <a
+                        href="/medical-health"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5447-aH4uwGc412f695.svg"
+                          width="24"
+                          height="24"
+                          alt="Medical"
+                        />
+                        <span class="text-sm">Medical & Health</span>
+                      </a>
+                    </div>
+
+                    <!-- Services Content -->
+                    <div
+                      id="services-tab"
+                      class="tab-content hidden grid-cols-3 gap-4 max-h-96 overflow-y-auto"
+                    >
+                      <a
+                        href="/advertising-marketing-communications-fairs"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5779-aH4uwG7e938f5e.svg"
+                          width="24"
+                          height="24"
+                          alt="Advertising"
+                        />
+                        <span class="text-sm"
+                          >Advertising, Marketing & Communications</span
+                        >
+                      </a>
+                      <a
+                        href="/agencies-associations"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5964-aH4uwGa9e6a4df.svg"
+                          width="24"
+                          height="24"
+                          alt="Agencies"
+                        />
+                        <span class="text-sm">Agencies & Associations</span>
+                      </a>
+                      <a
+                        href="/banking-financial-insurance-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5785-aH4uwG0827c590.svg"
+                          width="24"
+                          height="24"
+                          alt="Banking"
+                        />
+                        <span class="text-sm"
+                          >Banking & Financial Services</span
+                        >
+                      </a>
+                      <a
+                        href="/business-and-management"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5826-aH4uwGd8f04ba2.svg"
+                          width="24"
+                          height="24"
+                          alt="Business"
+                        />
+                        <span class="text-sm">Business & Management</span>
+                      </a>
+                      <a
+                        href="/construction-engineering-real-estate"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5842-aH4uwGb858a9d7.svg"
+                          width="24"
+                          height="24"
+                          alt="Construction"
+                        />
+                        <span class="text-sm">Construction & Engineering</span>
+                      </a>
+                      <a
+                        href="/courses-schools-trainings"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5966-aH4uwG6a4f65a1.svg"
+                          width="24"
+                          height="24"
+                          alt="Courses"
+                        />
+                        <span class="text-sm">Courses & Trainings</span>
+                      </a>
+                      <a
+                        href="/legal-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5796-aH4uwG69259110.svg"
+                          width="24"
+                          height="24"
+                          alt="Legal"
+                        />
+                        <span class="text-sm">Legal Services</span>
+                      </a>
+                      <a
+                        href="/logistic-cargo-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5863-aH4uwGc930fced.svg"
+                          width="24"
+                          height="24"
+                          alt="Logistic"
+                        />
+                        <span class="text-sm">Logistic & Cargo Services</span>
+                      </a>
+                      <a
+                        href="/medical-health-fitness-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5832-aH4uwG7bbdd254.svg"
+                          width="24"
+                          height="24"
+                          alt="Medical"
+                        />
+                        <span class="text-sm">Medical & Health Services</span>
+                      </a>
+                    </div>
+
+                    <!-- Investors Content -->
+                    <div
+                      id="investors-tab"
+                      class="tab-content hidden grid-cols-3 gap-4 max-h-96 overflow-y-auto"
+                    >
+                      <a
+                        href="/advertising-marketing-communications-fairs"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5779-aH4uwG7e938f5e.svg"
+                          width="24"
+                          height="24"
+                          alt="Advertising"
+                        />
+                        <span class="text-sm"
+                          >Advertising, Marketing & Communications</span
+                        >
+                      </a>
+                      <a
+                        href="/agencies-associations"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5964-aH4uwGa9e6a4df.svg"
+                          width="24"
+                          height="24"
+                          alt="Agencies"
+                        />
+                        <span class="text-sm">Agencies & Associations</span>
+                      </a>
+                      <a
+                        href="/banking-financial-insurance-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5785-aH4uwG0827c590.svg"
+                          width="24"
+                          height="24"
+                          alt="Banking"
+                        />
+                        <span class="text-sm"
+                          >Banking & Financial Services</span
+                        >
+                      </a>
+                      <a
+                        href="/business-and-management"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5826-aH4uwGd8f04ba2.svg"
+                          width="24"
+                          height="24"
+                          alt="Business"
+                        />
+                        <span class="text-sm">Business & Management</span>
+                      </a>
+                      <a
+                        href="/construction-engineering-real-estate"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5842-aH4uwGb858a9d7.svg"
+                          width="24"
+                          height="24"
+                          alt="Construction"
+                        />
+                        <span class="text-sm">Construction & Engineering</span>
+                      </a>
+                      <a
+                        href="/courses-schools-trainings"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5966-aH4uwG6a4f65a1.svg"
+                          width="24"
+                          height="24"
+                          alt="Courses"
+                        />
+                        <span class="text-sm">Courses & Trainings</span>
+                      </a>
+                      <a
+                        href="/legal-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5796-aH4uwG69259110.svg"
+                          width="24"
+                          height="24"
+                          alt="Legal"
+                        />
+                        <span class="text-sm">Legal Services</span>
+                      </a>
+                      <a
+                        href="/logistic-cargo-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5863-aH4uwGc930fced.svg"
+                          width="24"
+                          height="24"
+                          alt="Logistic"
+                        />
+                        <span class="text-sm">Logistic & Cargo Services</span>
+                      </a>
+                      <a
+                        href="/medical-health-fitness-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5832-aH4uwG7bbdd254.svg"
+                          width="24"
+                          height="24"
+                          alt="Medical"
+                        />
+                        <span class="text-sm">Medical & Health Services</span>
+                      </a>
+                      <a
+                        href="/business-and-management"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5826-aH4uwGd8f04ba2.svg"
+                          width="24"
+                          height="24"
+                          alt="Business"
+                        />
+                        <span class="text-sm">Business & Management</span>
+                      </a>
+                      <a
+                        href="/construction-engineering-real-estate"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5842-aH4uwGb858a9d7.svg"
+                          width="24"
+                          height="24"
+                          alt="Construction"
+                        />
+                        <span class="text-sm">Construction & Engineering</span>
+                      </a>
+                      <a
+                        href="/courses-schools-trainings"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5966-aH4uwG6a4f65a1.svg"
+                          width="24"
+                          height="24"
+                          alt="Courses"
+                        />
+                        <span class="text-sm">Courses & Trainings</span>
+                      </a>
+                      <a
+                        href="/legal-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5796-aH4uwG69259110.svg"
+                          width="24"
+                          height="24"
+                          alt="Legal"
+                        />
+                        <span class="text-sm">Legal Services</span>
+                      </a>
+                      <a
+                        href="/logistic-cargo-services"
+                        class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <img
+                          src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5863-aH4uwGc930fced.svg"
+                          width="24"
+                          height="24"
+                          alt="Logistic"
+                        />
+                        <span class="text-sm">Logistic & Cargo Services</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
               <li><a href="#" class="hover:text-green-400">Pages +</a></li>
               <li><a href="#" class="hover:text-green-400">Services +</a></li>
               <li><a href="#" class="hover:text-green-400">Projects +</a></li>
@@ -141,7 +686,8 @@
         </div>
       </nav>
     </div>
-    <!--  Video Background Section -->
+
+    <!--  Hero -->
     <div class="relative w-full min-h-screen overflow-hidden">
       <!-- Video -->
       <video

@@ -120,3 +120,22 @@ products.forEach((p) => {
     `;
   container.innerHTML += card;
 });
+
+function switchTab(tabName, button) {
+  const allTabs = document.querySelectorAll(".tab-content");
+  const allButtons = document.querySelectorAll(".tab-button");
+
+  allTabs.forEach((tab) => {
+    tab.classList.add("hidden");
+    tab.classList.remove("grid");
+  });
+
+  allButtons.forEach((btn) => {
+    btn.classList.remove("text-green-500");
+  });
+
+  document.getElementById(tabName + "-tab").classList.remove("hidden");
+  document.getElementById(tabName + "-tab").classList.add("grid");
+
+  button.classList.add("text-green-500");
+}
