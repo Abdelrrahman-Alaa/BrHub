@@ -20,9 +20,30 @@
     <title>BrHub</title>
   </head>
   <body class="text-gray-800 font-sans">
-    <!-- Navbar -->
+    <!-- Navbar
     <div class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
-      <!-- Top Bar -->
+      
+    </div> -->
+
+    <!--  Hero -->
+    <div class="relative w-full min-h-screen overflow-hidden">
+      <!-- Video -->
+      <video
+        class="absolute top-0 left-0 w-full h-full object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="assets/header.webm" type="video/webm" />
+      </video>
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+      
+      <!-- Content Layer -->
+      <div class="relative z-10">
+        <!-- Top Bar -->
       <div class="text-white text-sm">
         <div
           class="max-w-7xl mx-auto flex flex-wrap justify-end items-center py-2 gap-3"
@@ -685,26 +706,7 @@
           </button>
         </div>
       </nav>
-    </div>
 
-    <!--  Hero -->
-    <div class="relative w-full min-h-screen overflow-hidden">
-      <!-- Video -->
-      <video
-        class="absolute top-0 left-0 w-full h-full object-cover"
-        autoplay
-        muted
-        loop
-        playsinline
-      >
-        <source src="assets/header.webm" type="video/webm" />
-      </video>
-
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/60"></div>
-
-      <!-- Content Layer -->
-      <div class="relative z-10">
         <!-- Hero Section -->
         <header class="shadow">
           <section
