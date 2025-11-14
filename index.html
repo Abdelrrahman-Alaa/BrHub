@@ -9,13 +9,19 @@
   <body class="text-gray-800 font-sans">
     <!-- Navbar -->
     <nav id="navbar" class="text-white right-0 left-0 top-9 z-50 absolute">
-      <div class="max-w-7xl mx-auto flex items-center justify-between py-2">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between py-2 px-4 md:py-4"
+      >
         <div class="flex items-center gap-10 justify-center">
           <div class="flex items-center gap-3">
-            <img src="assets/logo.png" alt="BRHUB Logo" class="h-12" />
+            <img
+              src="assets/logo.png"
+              alt="BRHUB Logo"
+              class="h-8 md:h-10 lg:h-12"
+            />
           </div>
 
-          <ul class="hidden md:flex items-center gap-10">
+          <ul class="hidden md:flex items-center md:gap-4 lg:gap-10">
             <li class="relative group">
               <a href="#" class="hover:text-green-400 flex items-center gap-1">
                 Home
@@ -565,7 +571,7 @@
         <div class="hidden md:block relative">
           <a
             href="#"
-            class="relative bg-[#048C4C] text-sm font-semibold px-8 py-4 rounded-none before:content-[''] before:absolute before:-left-3 before:top-0 before:w-3 before:h-full before:bg-[#048C4C] before:[clip-path:polygon(100%_0,100%_100%,0_0%,0%_0%,0_0)]"
+            class="relative bg-[#048C4C] text-sm font-semibold px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-none before:content-[''] before:absolute before:-left-3 before:top-0 before:w-3 before:h-full before:bg-[#048C4C] before:[clip-path:polygon(100%_0,100%_100%,0_0%,0%_0%,0_0)]"
           >
             Get Start !
           </a>
@@ -574,7 +580,7 @@
         <button class="md:hidden text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6"
+            class="w-8 h-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -589,6 +595,7 @@
         </button>
       </div>
     </nav>
+
     <!--  Hero -->
     <div class="relative w-full min-h-screen">
       <!-- Video -->
@@ -609,7 +616,7 @@
         <!-- Top Bar -->
         <div class="text-white text-sm">
           <div
-            class="max-w-7xl mx-auto flex flex-wrap justify-end items-center py-2 gap-3"
+            class="max-w-7xl mx-auto flex-wrap justify-center md:justify-end items-center py-2 gap-3 hidden md:flex"
           >
             <div class="flex items-center gap-5">
               <div class="flex items-center gap-2 border-gray-700 pl-4">
@@ -692,12 +699,12 @@
         <!-- Hero Section -->
         <header class="shadow">
           <section
-            class="text-white min-h-[80vh] flex flex-col items-center justify-center text-center px-4"
+            class="text-white min-h-[70vh] md:min-h-[80vh] flex flex-col items-center justify-center text-center px-4 pt-28 md:pt-0"
           >
-            <div class="max-w-3xl">
+            <div class="max-w-xl sm:max-w-2xl md:max-w-3xl">
               <p class="text-sm text-gray-300 mb-3">Redefined Cargo Services</p>
               <h1
-                class="text-4xl md:text-5xl font-extrabold leading-tight mb-4"
+                class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4"
               >
                 Connect With Verified<br />Suppliers Worldwide
               </h1>
@@ -708,7 +715,7 @@
               </p>
               <a
                 href="#"
-                class="inline-block bg-white text-black font-semibold px-6 py-3 shadow-[4px_4px_0px_#7b4b28] hover:bg-gray-200 transition"
+                class="inline-block bg-white text-black font-semibold px-4 py-2 md:px-6 md:py-3 shadow-[4px_4px_0px_#7b4b28] hover:bg-gray-200 transition"
               >
                 Explore More
               </a>
@@ -720,7 +727,7 @@
 
     <!-- Statistics -->
     <section
-      class="bg-[#082D38] text-white py-22 bg-[url('./assets/map.png')] bg-cover bg-center bg-no-repeat"
+      class="bg-[#082D38] text-white py-14 px-6 md:px-8 md:py-22 bg-[url('./assets/map.png')] bg-cover bg-center bg-no-repeat"
     >
       <div class="max-w-7xl mx-auto">
         <!-- Sub Header -->
@@ -730,7 +737,7 @@
 
         <!-- Main Header -->
         <h2
-          class="text-3xl md:text-4xl font-bold leading-snug mb-6 text-[#EFEFEF]"
+          class="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-6 text-[#EFEFEF]"
         >
           We Deliver Smart, Modern Logistics That Move Your Business Forward.
           <span class="bg-green-500 px-2 text-[#EFEFEF]">
@@ -739,7 +746,9 @@
         </h2>
 
         <!-- Statistics -->
-        <div class="mt-12 grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+        <div
+          class="mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center"
+        >
           <div>
             <p class="text-3xl font-bold text-[#EFEFEF]">5K+</p>
             <p class="text-gray-400 text-sm mt-1">New Partners Every Year</p>
@@ -768,7 +777,7 @@
 
     <!-- Gallery -->
     <section
-      class="max-w-7xl mx-auto py-16 flex flex-col lg:flex-row items-center gap-10"
+      class="max-w-7xl mx-auto py-12 px-6 md:px-8 md:py-16 flex flex-col lg:flex-row items-center gap-8 md:gap-10"
     >
       <!-- Left Side -->
       <div class="flex-1 space-y-6">
@@ -776,12 +785,12 @@
           <img
             src="./assets/left-img.png"
             alt="Container Ship"
-            class="w-full h-64 object-cover rounded-xl"
+            class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-xl"
           />
         </div>
 
         <div>
-          <h2 class="text-3xl font-extrabold mb-4">
+          <h2 class="text-2xl md:text-3xl font-extrabold mb-4">
             Our Performance at a Glance
           </h2>
           <ul class="space-y-2 text-base">
@@ -808,7 +817,9 @@
 
       <!-- Right Side -->
       <div class="flex-1 space-y-6">
-        <h2 class="text-3xl font-extrabold">Why You Work With Us</h2>
+        <h2 class="text-2xl md:text-3xl font-extrabold">
+          Why You Work With Us
+        </h2>
         <p class="text-gray-700 leading-relaxed font-medium">
           We Are a Leading One-Stop Logistics Service Provider.<br />
           We help you reach your exact delivery destination on time — without
@@ -826,24 +837,26 @@
           <img
             src="./assets/right-img.png"
             alt="Truck and Ship"
-            class="w-full h-48 object-cover rounded-xl"
+            class="w-full h-40 sm:h-48 object-cover rounded-xl"
           />
         </div>
       </div>
     </section>
 
     <!-- Premium Products -->
-    <section class="bg-[#082D38] py-16 text-white">
+    <section class="bg-[#082D38] py-10 md:py-16 px-4 sm:px-6 text-white">
       <div class="max-w-7xl mx-auto text-center">
         <!-- Header -->
-        <h2 class="text-3xl md:text-4xl font-bold mb-3">Premium Products</h2>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+          Premium Products
+        </h2>
         <p class="text-gray-300 mb-12">
           Selected Products from Our Best Exporters
         </p>
 
         <!-- Product Grid -->
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 auto-rows-fr"
         >
           <!-- Card -->
           <div
@@ -1000,12 +1013,14 @@
         class="text-white min-h-screen flex flex-col items-center justify-center text-center px-4"
       >
         <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4"
+          >
             Connect With <br />
             Verified Suppliers<br />
             Worldwide
           </h1>
-          <p class="text-[#EFEFEF] mb-4 font-bold">
+          <p class="text-[#EFEFEF] mb-3 sm:mb-4">
             Expand your business globally with trusted exporters, competitive
             pricing, and seamless logistics.
           </p>
@@ -1026,21 +1041,23 @@
 
     <!-- Find The Products -->
     <section
-      class="flex flex-col items-center justify-center text-center px-4 py-16"
+      class="flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-0 py-16"
     >
       <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4"
+        >
           Find the Products You Need — Request a Quote Instantly
         </h1>
 
-        <p class="mb-4">
+        <p class="mb-3 sm:mb-4 text-gray-700">
           Browse verified suppliers and high-quality products across multiple
           categories. Select what fits your business and send a quotation
           request directly to exporters — fast, secure, and hassle-free.
         </p>
         <a
           href="#"
-          class="inline-block bg-[#00235B] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 transition"
+          class="inline-block bg-[#00235B] text-white font-semibold md:px-6 md:py-3 px-4 py-2 shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 transition"
         >
           Explore More
         </a>
@@ -1048,10 +1065,10 @@
     </section>
 
     <!-- Tabs Section -->
-    <section class="max-w-7xl mx-auto pb-16">
+    <section class="max-w-7xl mx-auto pb-16 px-4 sm:px-6">
       <!-- Tabs Header -->
       <div
-        class="flex flex-wrap gap-2 justify-center mb-10 bg-[#F3F4F6] py-4 rounded-full"
+        class="flex flex-wrap justify-center gap-2 mb-10 bg-[#F3F4F6] py-4 md:rounded-full rounded-xl"
       >
         <button
           class="tab-btn bg-green-600 text-white font-medium px-6 py-2 rounded-full"
@@ -1100,7 +1117,7 @@
       <!-- Tabs Content -->
       <div
         id="premium"
-        class="tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 auto-rows-fr"
+        class="tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 auto-rows-fr"
       >
         <!-- <div
           class="border border-gray-300 rounded-xl px-4 py-8 flex flex-col justify-between"
@@ -1162,80 +1179,108 @@
     </section>
 
     <!-- Office -->
-    <section
-      class="bg-white shadow bg-[url('./assets/office.png')] rounded-2xl max-w-7xl mx-auto py-16 bg-cover bg-center bg-no-repeat"
-    >
-      <div
-        class="text-white flex flex-col items-center justify-center text-center px-4"
+    <section class="px-6">
+      <section
+        class="bg-white shadow bg-[url('./assets/office.png')] rounded-2xl max-w-7xl mx-auto py-16 bg-cover bg-center bg-no-repeat"
       >
-        <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
-            Where Elegance <br />Meets Everyday Life
-          </h1>
+        <div
+          class="text-white flex flex-col items-center justify-center text-center px-4"
+        >
+          <div class="max-w-3xl">
+            <h1
+              class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
+            >
+              Where Elegance <br />Meets Everyday Life
+            </h1>
+          </div>
         </div>
-      </div>
+      </section>
     </section>
 
     <!-- City -->
-    <section
-      class="bg-white shadow bg-[url('./assets/city.png')] rounded-2xl max-w-7xl mx-auto py-32 bg-cover bg-center bg-no-repeat mt-16"
-    >
-      <div
-        class="text-white flex flex-col items-center justify-center text-center px-4"
+    <section class="px-6">
+      <section
+        class="bg-white shadow bg-[url('./assets/city.png')] rounded-2xl max-w-7xl mx-auto py-32 bg-cover bg-center bg-no-repeat mt-16"
       >
-        <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
-            Global Trade Made <br />
-            Simple & Secure
-          </h1>
-          <p class="text-[#EFEFEF] mb-4">
-            Our platform links you directly to thousands of certified suppliers,
-            helping you discover new products, compare offers, and grow faster
-            in international markets.
-          </p>
-          <a
-            href="#"
-            class="inline-block bg-white text-black font-semibold px-6 py-3 shadow-[4px_4px_0px_#7b4b28] hover:bg-gray-200 transition"
-          >
-            Explore More
-          </a>
+        <div
+          class="text-white flex flex-col items-center justify-center text-center px-4 sm:px-6"
+        >
+          <div class="max-w-3xl">
+            <h1
+              class="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4"
+            >
+              Global Trade Made <br />
+              Simple & Secure
+            </h1>
+            <p class="text-[#EFEFEF] mb-4">
+              Our platform links you directly to thousands of certified
+              suppliers, helping you discover new products, compare offers, and
+              grow faster in international markets.
+            </p>
+            <a
+              href="#"
+              class="inline-block bg-white text-black font-semibold px-4 py-2 md:px-6 md:py-3 shadow-[4px_4px_0px_#7b4b28] hover:bg-gray-200 transition"
+            >
+              Explore More
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="px-6">
+      <div
+        class="bg-[#082D38] rounded-2xl py-6 px-6 md:px-12 shadow-xl max-w-7xl mt-16 mx-auto"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4"
+        >
+          <!-- Stat 1 -->
+          <div class="bg-white rounded-xl p-3 text-center">
+            <h3
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#00235B] mb-2"
+            >
+              98%
+            </h3>
+            <p class="text-slate-600 font-semibold">Customer Satisfaction</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="bg-white rounded-xl p-3 text-center">
+            <h3
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#00235B] mb-2"
+            >
+              24/7
+            </h3>
+            <p class="text-slate-600 font-semibold">Support Available</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="bg-white rounded-xl p-3 text-center">
+            <h3
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#00235B] mb-2"
+            >
+              15+
+            </h3>
+            <p class="text-slate-600 font-semibold">Years of Experience</p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="bg-white rounded-xl p-3 text-center">
+            <h3
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#00235B] mb-2"
+            >
+              50+
+            </h3>
+            <p class="text-slate-600 font-semibold">Global Clients</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <div
-      class="bg-[#082D38] rounded-2xl py-6 px-12 shadow-xl max-w-7xl mt-16 mx-auto"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Stat 1 -->
-        <div class="bg-white rounded-xl p-3 text-center">
-          <h3 class="text-4xl font-bold text-[#00235B] mb-2">98%</h3>
-          <p class="text-slate-600 font-semibold">Customer Satisfaction</p>
-        </div>
-
-        <!-- Stat 2 -->
-        <div class="bg-white rounded-xl p-3 text-center">
-          <h3 class="text-4xl font-bold text-[#00235B] mb-2">24/7</h3>
-          <p class="text-slate-600 font-semibold">Support Available</p>
-        </div>
-
-        <!-- Stat 3 -->
-        <div class="bg-white rounded-xl p-3 text-center">
-          <h3 class="text-4xl font-bold text-[#00235B] mb-2">15+</h3>
-          <p class="text-slate-600 font-semibold">Years of Experience</p>
-        </div>
-
-        <!-- Stat 4 -->
-        <div class="bg-white rounded-xl p-3 text-center">
-          <h3 class="text-4xl font-bold text-[#00235B] mb-2">50+</h3>
-          <p class="text-slate-600 font-semibold">Global Clients</p>
-        </div>
-      </div>
-    </div>
-
     <!-- Logistics -->
-    <section class="max-w-7xl mx-auto py-16">
+    <section class="max-w-7xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <!-- Left Side - Image with Overlay Text -->
         <div class="relative overflow-hidden shadow-2xl h-full">
@@ -1251,7 +1296,9 @@
           ></div>
 
           <!-- Text Content on Image -->
-          <div class="absolute bottom-0 left-0 p-8 text-white">
+          <div
+            class="absolute bottom-0 left-0 p-6 md:p-8 text-white max-w-md lg:max-w-lg"
+          >
             <h2 class="text-2xl md:text-4xl font-bold mb-4 leading-tight">
               Building Global<br />
               Partnerships That Drive<br />
@@ -1274,7 +1321,7 @@
 
           <!-- Main Heading -->
           <h1
-            class="text-4xl md:text-4xl font-bold text-gray-900 leading-tight"
+            class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight"
           >
             Your Gateway To Global Trade<br />
             & Smart Logistics
@@ -1291,7 +1338,7 @@
           </p>
 
           <!-- Features Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
             <!-- Feature 1 -->
             <div class="flex gap-3">
               <div class="shrink-0">
@@ -1412,7 +1459,7 @@
           </div>
 
           <!-- CTA Button -->
-          <div class="pt-4">
+          <div class="pt-4 flex justify-center lg:justify-start">
             <a
               href="#"
               class="inline-block bg-[#04275E] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 transition"
@@ -1425,12 +1472,12 @@
     </section>
 
     <!-- Metrics -->
-    <div class="p-16">
+    <div class="p-8 md:p-16">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <!-- Left Side - Bar Chart -->
           <div
-            class="bg-gray-200 rounded-3xl p-8 shadow-lg flex flex-col justify-between"
+            class="bg-gray-200 rounded-3xl p-6 shadow-lg flex flex-col justify-between h-full"
           >
             <div class="flex items-center justify-between mb-6">
               <h2 class="text-2xl font-bold text-gray-900">
@@ -1452,21 +1499,27 @@
                   <div class="w-4 h-4 bg-[#1e3a5f] rounded-sm"></div>
                   <span class="text-gray-700 font-medium">Heat Score</span>
                 </div>
-                <div class="text-4xl font-bold text-gray-900">42</div>
+                <div class="md:text-4xl text-2xl font-bold text-gray-900">
+                  42
+                </div>
               </div>
               <div>
                 <div class="flex items-center gap-2">
                   <div class="w-4 h-4 bg-[#4a9d5f] rounded-sm"></div>
                   <span class="text-gray-700 font-medium">Heat Trend</span>
                 </div>
-                <div class="text-4xl font-bold text-gray-900">192</div>
+                <div class="md:text-4xl text-2xl font-bold text-gray-900">
+                  192
+                </div>
               </div>
               <div>
                 <div class="flex items-center gap-2">
                   <div class="w-4 h-4 bg-[#0f2744] rounded-sm"></div>
                   <span class="text-gray-700 font-medium">Growth Score</span>
                 </div>
-                <div class="text-4xl font-bold text-gray-900">210</div>
+                <div class="md:text-4xl text-2xl font-bold text-gray-900">
+                  210
+                </div>
               </div>
             </div>
 
@@ -1503,7 +1556,7 @@
           </div>
 
           <!-- Right Side - Grid of Cards -->
-          <div class="grid grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Heat Score Card -->
             <div class="bg-gray-200 rounded-3xl p-6 shadow-lg">
               <div class="flex items-center justify-between mb-4">
@@ -1789,12 +1842,12 @@
     </div>
 
     <!-- Pricing -->
-    <div class="bg-[#F1F1F1] py-16">
+    <section class="bg-[#F1F1F1] px-6 py-12 md:py-16">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <!-- Free Plan -->
           <div
-            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col justify-between"
+            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col h-full  justify-between"
           >
             <h2 class="text-2xl font-bold mb-2">Free</h2>
             <p class="text-gray-200 mb-6 text-sm">
@@ -1806,7 +1859,7 @@
               <span class="text-gray-200 text-lg">/ month</span>
             </div>
 
-            <div class="border-t border-green-600 pt-6 mb-6">
+            <div class="border-t flex flex-col justify-between h-full border-green-600 pt-6 mb-6">
               <h3 class="text-xl font-semibold mb-4">What's included</h3>
               <ul class="text-gray-200 space-y-2 text-sm">
                 <li class="flex items-center gap-2">
@@ -1921,7 +1974,7 @@
 
           <!-- Premium Plus Plan -->
           <div
-            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col justify-between"
+            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col h-full justify-between"
           >
             <h2 class="text-3xl font-bold mb-2">Premium Plus</h2>
             <p class="text-gray-200 mb-6 text-sm">
@@ -1945,7 +1998,7 @@
               </p>
             </div>
 
-            <div class="border-t border-green-600 pt-6 mb-6">
+            <div class="border-t flex flex-col justify-between h-full border-green-600 pt-6 mb-6">
               <h3 class="text-xl font-semibold mb-4">What's included</h3>
               <ul class="text-gray-200 space-y-2 text-sm">
                 <li class="flex items-center gap-2">
@@ -2038,7 +2091,7 @@
 
           <!-- Premium Pro Plan -->
           <div
-            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col justify-between"
+            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col h-full justify-between"
           >
             <div class="flex items-center gap-2 mb-2">
               <h2 class="text-2xl font-bold">Premium</h2>
@@ -2068,7 +2121,7 @@
                 $144 billed annually
               </p>
             </div>
-            <div class="border-t border-green-600 pt-6 mb-6">
+            <div class="border-t flex flex-col justify-between h-full border-green-600 pt-6 mb-6">
               <h3 class="text-xl font-semibold mb-4">What's included</h3>
               <ul class="text-gray-200 space-y-2 text-sm">
                 <li class="flex items-center gap-2">
@@ -2160,10 +2213,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Brands -->
-    <div class="max-w-7xl mx-auto py-16">
+    <div class="max-w-7xl mx-auto py-12 md:py-16 px-6">
       <!-- Header -->
       <div class="text-center mb-12">
         <p class="text-gray-500 text-sm mb-2">Our Global</p>
@@ -2177,7 +2230,7 @@
 
       <!-- Logos Grid -->
       <div class="">
-        <div class="flex max-w-3xl items-center justify-center mx-auto gap-16">
+        <div class="flex flex-wrap lg:flex-nowrap max-w-3xl items-center justify-center mx-auto gap-8 sm:gap-16">
           <img
             src="./assets/logos/mihovu.svg"
             alt="Brand 1"
@@ -2194,7 +2247,7 @@
             class="object-contain"
           />
         </div>
-        <div class="flex max-w-3xl items-center justify-center mx-auto gap-16">
+        <div class="flex flex-wrap lg:flex-nowrap max-w-3xl items-center justify-center mx-auto gap-8 sm:gap-16">
           <img
             src="./assets/logos/fedex.svg"
             alt="Brand 1"
@@ -2216,7 +2269,7 @@
             class="object-contain"
           />
         </div>
-        <div class="flex max-w-3xl items-center justify-center mx-auto gap-16">
+        <div class="flex flex-wrap lg:flex-nowrap max-w-3xl items-center justify-center mx-auto gap-8 sm:gap-16">
           <img
             src="./assets/logos/purolator.svg"
             alt="Brand 1"
@@ -2247,7 +2300,7 @@
         </div>
 
         <!-- Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-10">
           <!-- Card 1: Leads Central -->
           <div
             class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-center items-center text-center hover:shadow-xl transition-shadow duration-300"
@@ -2573,32 +2626,36 @@
 
     <!-- Form -->
     <section
-      class="bg-[#B3B3B3]/50 bg-[url('./assets/zoomed-map.png')] bg-cover bg-center bg-no-repeat py-20 relative overflow-hidden"
+      class="bg-[#B3B3B3]/50 bg-[url('./assets/zoomed-map.png')] bg-cover bg-center bg-no-repeat py-12 md:py-16 lg:py-20
+ relative overflow-hidden"
     >
       <div
-        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 px-6"
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8 md:gap-10 px-6 lg:px-8
+"
       >
         <!-- Left Content -->
-        <div class="space-y-6">
+      <div class="space-y-4 md:space-y-6 order-2 lg:order-1">
           <p class="text-[#082D38] font-medium">Our Location</p>
 
-          <h2 class="text-4xl font-extrabold text-[#082D38] leading-tight">
-            Leader In Supply Chain <br />
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#082D38] leading-tight">
+            Leader In Supply Chain<br class="hidden sm:block" />
             Storage & Distribution
           </h2>
 
           <!-- Divider Line -->
           <img src="./assets/blue.svg" alt="" />
 
-          <p class="text-gray-600 leading-relaxed max-w-md">
+<p class="text-gray-600 leading-relaxed text-sm md:text-base max-w-md">
             Erat mollis iaculis diam ornare nisl. Bibendum mauris vel
             suspendisse posuere posuere montes. Non porttitor condimentum porta
             malesuada.
           </p>
 
           <!-- Form -->
-          <form class="space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <form class="space-y-3 md:space-y-4 pt-2">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+
               <input
                 type="text"
                 placeholder="Enter Your Name"
@@ -2611,7 +2668,8 @@
               />
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+
               <select
                 class="border rounded-md p-3 w-full text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#048C4C]"
               >
@@ -2630,66 +2688,55 @@
               class="border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-[#048C4C]"
             ></textarea>
 
-            <div class="pt-4">
-              <a
-                href="#"
-                class="inline-block bg-[#04275E] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 transition"
-              >
+            <div class="pt-2 md:pt-4">
+
+              <button type="submit" class="w-full sm:w-auto inline-block bg-[#04275E] text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base shadow-[3px_3px_0px_#048C4C] md:shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 hover:shadow-[2px_2px_0px_#048C4C] active:shadow-[1px_1px_0px_#048C4C] active:translate-x-0.5 active:translate-y-0.5 transition-all duration-200">
+
                 Request Quote
-              </a>
+              </button>
             </div>
           </form>
         </div>
 
         <!-- Right Image -->
-        <div class="flex justify-center relative">
+      <div class="flex justify-center items-center relative order-1 lg:order-2">
+        <div class="w-full max-w-md lg:max-w-full">
           <img
             src="./assets/man.png"
             alt="Saudi man with laptop"
-            class="w-full object-contain z-10"
-          />
-          <div
-            class="absolute inset-0 bg-[url('./assets/img/map-bg.png')] bg-cover bg-center opacity-10 -z-10"
-          ></div>
+class="w-full h-auto object-contain rounded-lg lg:rounded-none"          />
+        </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Us -->
-    <section class="relative text-white pt-16 overflow-hidden">
+<section class="relative text-white pt-8 md:pt-12 lg:pt-16 overflow-hidden">
       <!-- Background image -->
       <div
         class="absolute inset-0 bg-[url('./assets/truck.png')] bg-cover bg-center"
       ></div>
 
       <!-- Form -->
-      <div
-        class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-10 px-6"
-      >
+      <div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-6 md:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8">
+
         <!-- Left Side -->
-        <div class="space-y-6 lg:col-span-6">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div class="flex justify-between items-center">
-            <h3 class="text-3xl text-gray-300 font-medium">
-              Subscribe Logi ...
-            </h3>
-            <div
-              class="flex items-center border border-gray-400 bg-white rounded-sm w-fit overflow-hidden"
-            >
-              <input
-                type="email"
-                placeholder="Enter your mail id"
-                class="px-4 py-2 text-gray-800 w-64 focus:outline-none"
-              />
-              <button
-                class="px-4 py-2 hover:bg-[#048C4C] hover:cursor-pointer transition"
-              >
+             <h3 class="text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium">Subscribe Logi ...</h3>
+              <div class="flex items-center border border-gray-400 bg-white rounded-sm w-full sm:w-fit overflow-hidden">
+
+              <input type="email" placeholder="Enter your mail id" class="px-3 md:px-4 py-2 text-gray-800 w-full sm:w-48 md:w-64 text-sm md:text-base focus:outline-none" />
+
+              <button class="px-3 md:px-4 py-2 hover:bg-[#048C4C] hover:cursor-pointer transition flex-shrink-0">
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="black"
-                  class="size-6"
+                  class="w-5 h-5 md:w-6 md:h-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -2703,55 +2750,55 @@
           <!-- Divider Line -->
           <img src="./assets/blue.svg" alt="" />
 
-          <div class="border-t border-gray-500/50 pt-6">
-            <div class="flex justify-between items-center">
-              <img src="./assets/logo.png" alt="Logo" class="h-10 mb-3" />
-              <div class="flex space-x-6">
+          <div class="border-t border-gray-500/50 pt-4 md:pt-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+      <img src="./assets/logo.png" alt="Logo" class="h-8 md:h-10" />
+      <div class="flex flex-wrap gap-3 sm:gap-4 md:gap-6 text-sm md:text-base">
                 <a class="" href="#">About Us</a>
                 <a class="" href="#">Services & Tools</a>
                 <a class="" href="#">Leads Central</a>
               </div>
             </div>
 
-            <h2 class="text-3xl font-bold leading-snug">
-              We Ship Worldwide <br />
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mt-4">
+
+              We Ship Worldwide <br class="hidden sm:block" />
               Without Borders
             </h2>
 
-            <a
-              href="#"
-              class="inline-flex gap-2 items-center justify-center mt-4"
-            >
+            <a href="#" class="inline-flex gap-2 items-center justify-center mt-3 md:mt-4 text-sm md:text-base hover:text-[#048C4C] transition">
+
               Discover <img src="./assets/svg/arrow.svg" alt="arrow" />
             </a>
           </div>
         </div>
 
         <!-- Right Form -->
-        <div
-          class="bg-white text-[#0C203B] rounded-sm shadow-xl p-8 space-y-6 lg:col-span-4"
-        >
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white text-[#0C203B] rounded-sm shadow-xl p-4 sm:p-6 md:p-8 space-y-4 md:space-y-6 lg:col-span-4">
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+
             <div>
-              <label class="block text-sm font-semibold mb-1">Your Name:</label>
+              <label class="block text-xs md:text-sm font-semibold mb-1">Your Name:</label>
               <input
                 type="text"
                 placeholder="Name"
-                class="border-b border-gray-300 w-full p-1 focus:outline-none"
+                class="border-b border-gray-300 w-full p-1 md:p-2 text-sm md:text-base focus:outline-none focus:border-[#048C4C] transition"
               />
             </div>
 
             <div>
-              <label class="block text-sm font-semibold mb-1">Phone No:</label>
+              <label class="block text-xs md:text-sm font-semibold mb-1">Phone No:</label>
               <input
                 type="text"
                 placeholder="Mobile No"
-                class="border-b border-gray-300 w-full p-1 focus:outline-none"
+                class="border-b border-gray-300 w-full p-1 md:p-2 text-sm md:text-base focus:outline-none focus:border-[#048C4C] transition"
               />
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+
             <div>
               <label class="block text-sm font-semibold mb-1"
                 >Freight Type:</label
@@ -2766,17 +2813,17 @@
             </div>
 
             <div>
-              <label class="block text-sm font-semibold mb-1">Load:</label>
+              <label class="block text-xs md:text-sm font-semibold mb-1">Load:</label>
               <input
                 type="text"
                 placeholder="Road"
-                class="border-b border-gray-300 w-full p-1 focus:outline-none"
+                class="border-b border-gray-300 w-full p-1 md:p-2 text-sm md:text-base focus:outline-none focus:border-[#048C4C] transition"
               />
             </div>
           </div>
 
           <div>
-            <label class="block text-sm font-semibold mb-1">Message:</label>
+            <label class="block text-xs md:text-sm font-semibold mb-1">Message:</label>
             <textarea
               rows="3"
               placeholder="Your Message"
@@ -2784,43 +2831,36 @@
             ></textarea>
           </div>
 
-          <div class="pt-4">
-            <a
-              href="#"
-              class="inline-block bg-[#04275E] text-white font-semibold px-6 py-3 shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 transition"
-            >
+         <div class="pt-2 md:pt-4">
+              <button type="submit" class="w-full sm:w-auto inline-block bg-[#04275E] text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base shadow-[3px_3px_0px_#048C4C] md:shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 hover:shadow-[2px_2px_0px_#048C4C] active:shadow-[1px_1px_0px_#048C4C] active:translate-x-0.5 active:translate-y-0.5 transition-all duration-200">
+
               Submit Request
-            </a>
+            </button>
           </div>
         </div>
       </div>
 
       <!-- Footer icons -->
 
-      <div
-        class="relative max-w-7xl mx-auto mt-10 p-6 flex justify-between items-center space-x-4 border-t border-gray-500 text-white"
-      >
-        <p class="text-sm text-gray-400 mt4">All Right Reserved © 2024</p>
-        <div class="flex items-center gap-4">
-          <span class="text-sm text-gray-300">Social Media :</span>
+      <div class="relative max-w-7xl mx-auto mt-6 md:mt-8 lg:mt-10 p-4 sm:p-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-gray-500 text-white">
+
+        <p class="text-xs sm:text-sm text-gray-400 text-center sm:text-left">All Right Reserved © 2024</p>
+  <div class="flex items-center gap-3 md:gap-4 flex-wrap justify-center">
+    <span class="text-xs sm:text-sm text-gray-300">Social Media :</span>
           <a
-            href="#"
-            class="w-8 h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C]"
+           href="#" class="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C] transition-all hover:scale-110"
             ><img src="./assets/svg/facebook.svg" alt="facebook"
           /></a>
           <a
-            href="#"
-            class="w-8 h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C]"
+           href="#" class="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C] transition-all hover:scale-110"
             ><img src="./assets/svg/x.svg" alt="x"
           /></a>
           <a
-            href="#"
-            class="w-8 h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C]"
+           href="#" class="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C] transition-all hover:scale-110"
             ><img src="./assets/svg/instagram.svg" alt="instagram"
           /></a>
           <a
-            href="#"
-            class="w-8 h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C]"
+           href="#" class="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center bg-[#04275E] rounded-full hover:bg-[#048C4C] transition-all hover:scale-110"
             ><img src="./assets/svg/linked-in.svg" alt="linked-in"
           /></a>
         </div>
