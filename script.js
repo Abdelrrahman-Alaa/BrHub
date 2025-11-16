@@ -158,3 +158,78 @@ window.addEventListener("scroll", () => {
 
   lastScroll = currentScroll;
 });
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById("mobile-menu");
+  if (mobileMenu.classList.contains("hidden")) {
+    mobileMenu.classList.remove("hidden");
+  } else {
+    mobileMenu.classList.add("hidden");
+  }
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", function (event) {
+  const navbar = document.getElementById("navbar");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (
+    !navbar.contains(event.target) &&
+    !mobileMenu.classList.contains("hidden")
+  ) {
+    mobileMenu.classList.add("hidden");
+  }
+});
+
+// open/close mobile menu
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById("mobile-menu");
+  mobileMenu.classList.toggle("hidden");
+}
+
+// open/close mobile dropdown
+function toggleMobileDropdown() {
+  const dropdown = document.getElementById("mobile-dropdown");
+  const arrow = document.getElementById("dropdown-arrow");
+
+  dropdown.classList.toggle("hidden");
+  arrow.classList.toggle("rotate-180");
+}
+
+// Switch mobile tabs
+function switchMobileTab(tabName, button) {
+  // hiding all tabs
+  const allTabs = document.querySelectorAll(".mobile-tab-content");
+  allTabs.forEach((tab) => {
+    tab.classList.add("hidden");
+    tab.classList.remove("flex");
+  });
+
+  // removing green color from all buttons
+  const allButtons = document.querySelectorAll(".mobile-tab-button");
+  allButtons.forEach((btn) => {
+    btn.classList.remove("text-green-400");
+  });
+
+  // displaying selected tab
+  const selectedTab = document.getElementById(`mobile-${tabName}-tab`);
+  selectedTab.classList.remove("hidden");
+  selectedTab.classList.add("flex");
+
+  // adding green color to selected button
+  button.classList.add("text-green-400");
+}
+
+// closing mobile menu when clicking outside
+document.addEventListener("click", function (event) {
+  const navbar = document.getElementById("navbar");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (
+    !navbar.contains(event.target) &&
+    !mobileMenu.classList.contains("hidden")
+  ) {
+    mobileMenu.classList.add("hidden");
+  }
+});

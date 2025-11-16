@@ -10,9 +10,9 @@
     <!-- Navbar -->
     <nav id="navbar" class="text-white right-0 left-0 top-9 z-50 absolute">
       <div
-        class="max-w-7xl mx-auto flex items-center justify-between py-2 px-4 md:py-4"
+        class="max-w-7xl mx-auto flex items-center justify-between py-2 px-4 md:px-6 md:py-4"
       >
-        <div class="flex items-center gap-10 justify-center">
+        <div class="flex items-center gap-8 justify-center">
           <div class="flex items-center gap-3">
             <img
               src="assets/logo.png"
@@ -21,7 +21,7 @@
             />
           </div>
 
-          <ul class="hidden md:flex items-center md:gap-4 lg:gap-10">
+          <ul class="hidden md:flex items-center md:gap-3 lg:gap-10">
             <li class="relative group">
               <a href="#" class="hover:text-green-400 flex items-center gap-1">
                 Home
@@ -577,7 +577,7 @@
           </a>
         </div>
 
-        <button class="md:hidden text-white">
+        <button class="md:hidden text-white" onclick="toggleMobileMenu()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-8 h-8"
@@ -593,6 +593,365 @@
             />
           </svg>
         </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-900 text-white absolute top-full left-0 right-0 z-40 max-h-[80vh] overflow-y-auto"
+      >
+        <ul class="flex flex-col p-4 gap-3">
+          <li>
+            <button
+              onclick="toggleMobileDropdown()"
+              class="w-full text-left py-2 hover:text-green-400 flex items-center justify-between"
+            >
+              Home
+              <svg
+                class="w-4 h-4 transition-transform"
+                id="dropdown-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Dropdown Content -->
+            <div
+              id="mobile-dropdown"
+              class="hidden bg-gray-800 rounded-lg mt-2 p-4"
+            >
+              <!-- Tabs -->
+              <div
+                class="flex gap-2 border-b border-gray-700 mb-4 overflow-x-auto"
+              >
+                <button
+                  onclick="switchMobileTab('products', this)"
+                  class="mobile-tab-button pb-2 px-4 text-sm font-semibold whitespace-nowrap text-green-400"
+                >
+                  Products
+                </button>
+                <button
+                  onclick="switchMobileTab('services', this)"
+                  class="mobile-tab-button pb-2 px-4 text-sm font-semibold whitespace-nowrap"
+                >
+                  Services
+                </button>
+                <button
+                  onclick="switchMobileTab('investors', this)"
+                  class="mobile-tab-button pb-2 px-4 text-sm font-semibold whitespace-nowrap"
+                >
+                  Investors
+                </button>
+              </div>
+
+              <!-- Products Content -->
+              <div
+                id="mobile-products-tab"
+                class="mobile-tab-content flex flex-col gap-2"
+              >
+                <a
+                  href="/activities-sports-and-entertainment"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5505-aH4uwG7d0dea66.svg"
+                    width="20"
+                    height="20"
+                    alt="Activities"
+                  />
+                  <span class="text-sm"
+                    >Activities, Sports & Entertainment</span
+                  >
+                </a>
+                <a
+                  href="/agricultural-machinery"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-6355-aH4uwGb5cf56a9.svg"
+                    width="20"
+                    height="20"
+                    alt="Agricultural"
+                  />
+                  <span class="text-sm">Agricultural Machinery</span>
+                </a>
+                <a
+                  href="/agriculture"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5953-aH4uwG82a20f8c.svg"
+                    width="20"
+                    height="20"
+                    alt="Agriculture"
+                  />
+                  <span class="text-sm">Agriculture</span>
+                </a>
+                <a
+                  href="/animals"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5488-aH4uwGb6e56d03.svg"
+                    width="20"
+                    height="20"
+                    alt="Animals"
+                  />
+                  <span class="text-sm">Animals</span>
+                </a>
+                <a
+                  href="/apparel-and-fashion"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5346-aH4uwGbd6404ed.svg"
+                    width="20"
+                    height="20"
+                    alt="Apparel"
+                  />
+                  <span class="text-sm">Apparel & Fashion</span>
+                </a>
+                <a
+                  href="/arts-crafts-and-gifts"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5368-aH4uwG65d9d22a.svg"
+                    width="20"
+                    height="20"
+                    alt="Arts"
+                  />
+                  <span class="text-sm">Arts, Crafts & Gifts</span>
+                </a>
+                <a
+                  href="/coffee"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-6250-aH4uwG731d41d7.svg"
+                    width="20"
+                    height="20"
+                    alt="Coffee"
+                  />
+                  <span class="text-sm">Coffee</span>
+                </a>
+                <a
+                  href="/food"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5322-aH4uwG13493262.svg"
+                    width="20"
+                    height="20"
+                    alt="Food"
+                  />
+                  <span class="text-sm">Food</span>
+                </a>
+                <a
+                  href="/furniture"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5957-aH4uwG3e3714d6.svg"
+                    width="20"
+                    height="20"
+                    alt="Furniture"
+                  />
+                  <span class="text-sm">Furniture</span>
+                </a>
+                <a
+                  href="/medical-health"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5447-aH4uwGc412f695.svg"
+                    width="20"
+                    height="20"
+                    alt="Medical"
+                  />
+                  <span class="text-sm">Medical & Health</span>
+                </a>
+              </div>
+
+              <!-- Services Content -->
+              <div
+                id="mobile-services-tab"
+                class="mobile-tab-content hidden flex-col gap-2"
+              >
+                <a
+                  href="/advertising-marketing-communications-fairs"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5779-aH4uwG7e938f5e.svg"
+                    width="20"
+                    height="20"
+                    alt="Advertising"
+                  />
+                  <span class="text-sm"
+                    >Advertising, Marketing & Communications</span
+                  >
+                </a>
+                <a
+                  href="/agencies-associations"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5964-aH4uwGa9e6a4df.svg"
+                    width="20"
+                    height="20"
+                    alt="Agencies"
+                  />
+                  <span class="text-sm">Agencies & Associations</span>
+                </a>
+                <a
+                  href="/banking-financial-insurance-services"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5785-aH4uwG0827c590.svg"
+                    width="20"
+                    height="20"
+                    alt="Banking"
+                  />
+                  <span class="text-sm">Banking & Financial Services</span>
+                </a>
+                <a
+                  href="/business-and-management"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5826-aH4uwGd8f04ba2.svg"
+                    width="20"
+                    height="20"
+                    alt="Business"
+                  />
+                  <span class="text-sm">Business & Management</span>
+                </a>
+                <a
+                  href="/construction-engineering-real-estate"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5842-aH4uwGb858a9d7.svg"
+                    width="20"
+                    height="20"
+                    alt="Construction"
+                  />
+                  <span class="text-sm">Construction & Engineering</span>
+                </a>
+                <a
+                  href="/legal-services"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5796-aH4uwG69259110.svg"
+                    width="20"
+                    height="20"
+                    alt="Legal"
+                  />
+                  <span class="text-sm">Legal Services</span>
+                </a>
+              </div>
+
+              <!-- Investors Content -->
+              <div
+                id="mobile-investors-tab"
+                class="mobile-tab-content hidden flex-col gap-2"
+              >
+                <a
+                  href="/advertising-marketing-communications-fairs"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5779-aH4uwG7e938f5e.svg"
+                    width="20"
+                    height="20"
+                    alt="Advertising"
+                  />
+                  <span class="text-sm"
+                    >Advertising, Marketing & Communications</span
+                  >
+                </a>
+                <a
+                  href="/agencies-associations"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5964-aH4uwGa9e6a4df.svg"
+                    width="20"
+                    height="20"
+                    alt="Agencies"
+                  />
+                  <span class="text-sm">Agencies & Associations</span>
+                </a>
+                <a
+                  href="/banking-financial-insurance-services"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5785-aH4uwG0827c590.svg"
+                    width="20"
+                    height="20"
+                    alt="Banking"
+                  />
+                  <span class="text-sm">Banking & Financial Services</span>
+                </a>
+                <a
+                  href="/business-and-management"
+                  class="flex items-center gap-3 p-2 hover:bg-gray-700 rounded-lg"
+                >
+                  <img
+                    src="https://cdn.b2brazil.com/assets/images/icons/categories/icon-5826-aH4uwGd8f04ba2.svg"
+                    width="20"
+                    height="20"
+                    alt="Business"
+                  />
+                  <span class="text-sm">Business & Management</span>
+                </a>
+              </div>
+
+              <a
+                href="/leadscentral"
+                target="_blank"
+                class="block mt-4 text-center text-green-400 hover:text-green-300 font-semibold text-sm"
+              >
+                Go to Leads Central →
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <a href="#" class="block py-2 hover:text-green-400">Pages +</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 hover:text-green-400">Services +</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 hover:text-green-400">Projects +</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 hover:text-green-400">Blogs +</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 hover:text-green-400">Contact</a>
+          </li>
+          <li class="pt-2">
+            <a
+              href="#"
+              class="block bg-[#048C4C] text-center px-6 py-3 rounded"
+            >
+              Get Start !
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -777,7 +1136,7 @@
 
     <!-- Gallery -->
     <section
-      class="max-w-7xl mx-auto py-12 px-6 md:px-8 md:py-16 flex flex-col lg:flex-row items-center gap-8 md:gap-10"
+      class="max-w-7xl mx-auto py-12 px-6 md:py-16 flex flex-col lg:flex-row items-center gap-8 md:gap-10"
     >
       <!-- Left Side -->
       <div class="flex-1 space-y-6">
@@ -844,7 +1203,7 @@
     </section>
 
     <!-- Premium Products -->
-    <section class="bg-[#082D38] py-10 md:py-16 px-4 sm:px-6 text-white">
+    <section class="bg-[#082D38] py-10 md:py-16 px-6 text-white">
       <div class="max-w-7xl mx-auto text-center">
         <!-- Header -->
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
@@ -1007,7 +1366,7 @@
 
     <!-- Connect -->
     <section
-      class="bg-white shadow bg-[url('./assets/rectangle.png')] bg-cover bg-center bg-no-repeat"
+      class="bg-white shadow bg-[url('./assets/rectangle.png')] bg-conver bg-center bg-no-repeat"
     >
       <section
         class="text-white min-h-screen flex flex-col items-center justify-center text-center px-4"
@@ -1041,7 +1400,7 @@
 
     <!-- Find The Products -->
     <section
-      class="flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-0 py-16"
+      class="flex flex-col items-center justify-center text-center px-6 py-16"
     >
       <div class="max-w-3xl">
         <h1
@@ -1065,7 +1424,7 @@
     </section>
 
     <!-- Tabs Section -->
-    <section class="max-w-7xl mx-auto pb-16 px-4 sm:px-6">
+    <section class="max-w-7xl mx-auto pb-16 px-6">
       <!-- Tabs Header -->
       <div
         class="flex flex-wrap justify-center gap-2 mb-10 bg-[#F3F4F6] py-4 md:rounded-full rounded-xl"
@@ -1117,7 +1476,7 @@
       <!-- Tabs Content -->
       <div
         id="premium"
-        class="tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 auto-rows-fr"
+        class="tab-content grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 auto-rows-fr"
       >
         <!-- <div
           class="border border-gray-300 rounded-xl px-4 py-8 flex flex-col justify-between"
@@ -1179,9 +1538,9 @@
     </section>
 
     <!-- Office -->
-    <section class="px-6">
+    <section class="px-6 max-w-7xl mx-auto">
       <section
-        class="bg-white shadow bg-[url('./assets/office.png')] rounded-2xl max-w-7xl mx-auto py-16 bg-cover bg-center bg-no-repeat"
+        class="bg-white shadow bg-[url('./assets/office.png')] rounded-2xl py-16 bg-cover bg-center bg-no-repeat"
       >
         <div
           class="text-white flex flex-col items-center justify-center text-center px-4"
@@ -1198,9 +1557,9 @@
     </section>
 
     <!-- City -->
-    <section class="px-6">
+    <section class="px-6 max-w-7xl mx-auto">
       <section
-        class="bg-white shadow bg-[url('./assets/city.png')] rounded-2xl max-w-7xl mx-auto py-32 bg-cover bg-center bg-no-repeat mt-16"
+        class="bg-white shadow bg-[url('./assets/city.png')] rounded-2xl py-32 bg-cover bg-center bg-no-repeat mt-16"
       >
         <div
           class="text-white flex flex-col items-center justify-center text-center px-4 sm:px-6"
@@ -1229,10 +1588,8 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="px-6">
-      <div
-        class="bg-[#082D38] rounded-2xl py-6 px-6 md:px-12 shadow-xl max-w-7xl mt-16 mx-auto"
-      >
+    <section class="px-6 max-w-7xl mx-auto">
+      <div class="bg-[#082D38] rounded-2xl py-6 px-6 md:px-12 shadow-xl mt-16">
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4"
         >
@@ -1472,17 +1829,83 @@
     </section>
 
     <!-- Metrics -->
-    <div class="p-8 md:p-16">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-          <!-- Left Side - Bar Chart -->
-          <div
-            class="bg-gray-200 rounded-3xl p-6 shadow-lg flex flex-col justify-between h-full"
-          >
-            <div class="flex items-center justify-between mb-6">
-              <h2 class="text-2xl font-bold text-gray-900">
-                Company Performance Metrics
-              </h2>
+    <div class="px-6 py-16 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <!-- Left Side - Bar Chart -->
+        <div
+          class="bg-gray-200 rounded-3xl p-6 shadow-lg flex flex-col justify-between h-full"
+        >
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">
+              Company Performance Metrics
+            </h2>
+            <button class="text-gray-600 hover:text-gray-900">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <circle cx="10" cy="4" r="1.5" />
+                <circle cx="10" cy="10" r="1.5" />
+                <circle cx="10" cy="16" r="1.5" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Legend -->
+          <div class="grid grid-cols-3 gap-8">
+            <div>
+              <div class="flex items-center gap-2">
+                <div class="w-4 h-4 bg-[#1e3a5f] rounded-sm"></div>
+                <span class="text-gray-700 font-medium">Heat Score</span>
+              </div>
+              <div class="md:text-4xl text-2xl font-bold text-gray-900">42</div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <div class="w-4 h-4 bg-[#4a9d5f] rounded-sm"></div>
+                <span class="text-gray-700 font-medium">Heat Trend</span>
+              </div>
+              <div class="md:text-4xl text-2xl font-bold text-gray-900">
+                192
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <div class="w-4 h-4 bg-[#0f2744] rounded-sm"></div>
+                <span class="text-gray-700 font-medium">Growth Score</span>
+              </div>
+              <div class="md:text-4xl text-2xl font-bold text-gray-900">
+                210
+              </div>
+            </div>
+          </div>
+
+          <!-- Values -->
+          <div class="grid grid-cols-3 gap-8 mb-8"></div>
+
+          <!-- Bar Chart -->
+          <div class="space-y-4 relative">
+            <!-- Bars -->
+            <div class="space-y-6">
+              <div class="h-8 bg-[#1e3a5f] rounded-lg" style="width: 20%"></div>
+              <div class="h-8 bg-[#4a9d5f] rounded-lg" style="width: 77%"></div>
+              <div class="h-8 bg-[#0f2744] rounded-lg" style="width: 84%"></div>
+            </div>
+          </div>
+          <!-- X-axis labels -->
+          <div class="flex justify-between text-sm text-gray-600 mb-2">
+            <span>0</span>
+            <span>50</span>
+            <span>100</span>
+            <span>150</span>
+            <span>200</span>
+            <span>250</span>
+          </div>
+        </div>
+
+        <!-- Right Side - Grid of Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Heat Score Card -->
+          <div class="bg-gray-200 rounded-3xl p-6 shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl text-gray-900">Heat Score</h3>
               <button class="text-gray-600 hover:text-gray-900">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                   <circle cx="10" cy="4" r="1.5" />
@@ -1492,362 +1915,283 @@
               </button>
             </div>
 
-            <!-- Legend -->
-            <div class="grid grid-cols-3 gap-8">
-              <div>
-                <div class="flex items-center gap-2">
-                  <div class="w-4 h-4 bg-[#1e3a5f] rounded-sm"></div>
-                  <span class="text-gray-700 font-medium">Heat Score</span>
-                </div>
-                <div class="md:text-4xl text-2xl font-bold text-gray-900">
-                  42
-                </div>
-              </div>
-              <div>
-                <div class="flex items-center gap-2">
-                  <div class="w-4 h-4 bg-[#4a9d5f] rounded-sm"></div>
-                  <span class="text-gray-700 font-medium">Heat Trend</span>
-                </div>
-                <div class="md:text-4xl text-2xl font-bold text-gray-900">
-                  192
-                </div>
-              </div>
-              <div>
-                <div class="flex items-center gap-2">
-                  <div class="w-4 h-4 bg-[#0f2744] rounded-sm"></div>
-                  <span class="text-gray-700 font-medium">Growth Score</span>
-                </div>
-                <div class="md:text-4xl text-2xl font-bold text-gray-900">
-                  210
-                </div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-4xl font-bold text-gray-900">78</div>
+              <div class="flex items-center gap-1 text-[#1e3a5f] font-bold">
+                <span class="text-xl">5.2%</span>
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  />
+                </svg>
               </div>
             </div>
 
-            <!-- Values -->
-            <div class="grid grid-cols-3 gap-8 mb-8"></div>
+            <!-- Wave Chart -->
+            <svg
+              class="w-full h-24"
+              viewBox="0 0 300 80"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <linearGradient
+                  id="blueGradient1"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #5b7fa8; stop-opacity: 0.6"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #5b7fa8; stop-opacity: 0.1"
+                  />
+                </linearGradient>
+              </defs>
+              <path
+                d="M0,50 Q25,30 50,35 T100,40 T150,25 T200,30 T250,35 T300,40 L300,80 L0,80 Z"
+                fill="url(#blueGradient1)"
+              />
+              <path
+                d="M0,50 Q25,30 50,35 T100,40 T150,25 T200,30 T250,35 T300,40"
+                fill="none"
+                stroke="#1e3a5f"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <!-- Growth Score Card -->
+          <div class="bg-gray-200 rounded-3xl p-6 shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl text-gray-900">Growth Score</h3>
+              <button class="text-gray-600 hover:text-gray-900">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <circle cx="10" cy="4" r="1.5" />
+                  <circle cx="10" cy="10" r="1.5" />
+                  <circle cx="10" cy="16" r="1.5" />
+                </svg>
+              </button>
+            </div>
 
-            <!-- Bar Chart -->
-            <div class="space-y-4 relative">
-              <!-- Bars -->
-              <div class="space-y-6">
-                <div
-                  class="h-8 bg-[#1e3a5f] rounded-lg"
-                  style="width: 20%"
-                ></div>
-                <div
-                  class="h-8 bg-[#4a9d5f] rounded-lg"
-                  style="width: 77%"
-                ></div>
-                <div
-                  class="h-8 bg-[#0f2744] rounded-lg"
-                  style="width: 84%"
-                ></div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-4xl font-bold text-gray-900">25</div>
+              <div class="flex items-center gap-1 text-[#4a9d5f] font-bold">
+                <span class="text-xl">10%</span>
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  />
+                </svg>
               </div>
             </div>
-            <!-- X-axis labels -->
-            <div class="flex justify-between text-sm text-gray-600 mb-2">
-              <span>0</span>
-              <span>50</span>
-              <span>100</span>
-              <span>150</span>
-              <span>200</span>
-              <span>250</span>
+
+            <!-- Wave Chart -->
+            <svg
+              class="w-full h-24"
+              viewBox="0 0 300 80"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <linearGradient
+                  id="greenGradient1"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #7cc991; stop-opacity: 0.6"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #7cc991; stop-opacity: 0.1"
+                  />
+                </linearGradient>
+              </defs>
+              <path
+                d="M0,45 Q30,20 60,35 T120,30 T180,25 T240,35 T300,50 L300,80 L0,80 Z"
+                fill="url(#greenGradient1)"
+              />
+              <path
+                d="M0,45 Q30,20 60,35 T120,30 T180,25 T240,35 T300,50"
+                fill="none"
+                stroke="#4a9d5f"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <!-- Bottom Row -->
+
+          <!-- Heat Trend Card -->
+          <div class="bg-gray-200 rounded-3xl p-6 shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl text-gray-900">Heat Trend</h3>
+              <button class="text-gray-600 hover:text-gray-900">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <circle cx="10" cy="4" r="1.5" />
+                  <circle cx="10" cy="10" r="1.5" />
+                  <circle cx="10" cy="16" r="1.5" />
+                </svg>
+              </button>
             </div>
+
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-4xl font-bold text-gray-900">174</div>
+              <div class="flex items-center gap-1 text-[#1e3a5f] font-bold">
+                <span class="text-xl">17%</span>
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Wave Chart -->
+            <svg
+              class="w-full h-24"
+              viewBox="0 0 300 80"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <linearGradient
+                  id="blueGradient2"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #5b7fa8; stop-opacity: 0.6"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #5b7fa8; stop-opacity: 0.1"
+                  />
+                </linearGradient>
+              </defs>
+              <path
+                d="M0,40 Q40,20 80,30 T160,25 T240,35 T300,45 L300,80 L0,80 Z"
+                fill="url(#blueGradient2)"
+              />
+              <path
+                d="M0,40 Q40,20 80,30 T160,25 T240,35 T300,45"
+                fill="none"
+                stroke="#1e3a5f"
+                stroke-width="2"
+              />
+            </svg>
           </div>
 
-          <!-- Right Side - Grid of Cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Heat Score Card -->
-            <div class="bg-gray-200 rounded-3xl p-6 shadow-lg">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-xl text-gray-900">Heat Score</h3>
-                <button class="text-gray-600 hover:text-gray-900">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <circle cx="10" cy="4" r="1.5" />
-                    <circle cx="10" cy="10" r="1.5" />
-                    <circle cx="10" cy="16" r="1.5" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="flex items-center justify-between mb-4">
-                <div class="text-4xl font-bold text-gray-900">78</div>
-                <div class="flex items-center gap-1 text-[#1e3a5f] font-bold">
-                  <span class="text-xl">5.2%</span>
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                      d="M5 10l7-7m0 0l7 7m-7-7v18"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <!-- Wave Chart -->
-              <svg
-                class="w-full h-24"
-                viewBox="0 0 300 80"
-                preserveAspectRatio="none"
-              >
-                <defs>
-                  <linearGradient
-                    id="blueGradient1"
-                    x1="0%"
-                    y1="0%"
-                    x2="0%"
-                    y2="100%"
-                  >
-                    <stop
-                      offset="0%"
-                      style="stop-color: #5b7fa8; stop-opacity: 0.6"
-                    />
-                    <stop
-                      offset="100%"
-                      style="stop-color: #5b7fa8; stop-opacity: 0.1"
-                    />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M0,50 Q25,30 50,35 T100,40 T150,25 T200,30 T250,35 T300,40 L300,80 L0,80 Z"
-                  fill="url(#blueGradient1)"
-                />
-                <path
-                  d="M0,50 Q25,30 50,35 T100,40 T150,25 T200,30 T250,35 T300,40"
-                  fill="none"
-                  stroke="#1e3a5f"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-            <!-- Growth Score Card -->
-            <div class="bg-gray-200 rounded-3xl p-6 shadow-lg">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-xl text-gray-900">Growth Score</h3>
-                <button class="text-gray-600 hover:text-gray-900">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <circle cx="10" cy="4" r="1.5" />
-                    <circle cx="10" cy="10" r="1.5" />
-                    <circle cx="10" cy="16" r="1.5" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="flex items-center justify-between mb-4">
-                <div class="text-4xl font-bold text-gray-900">25</div>
-                <div class="flex items-center gap-1 text-[#4a9d5f] font-bold">
-                  <span class="text-xl">10%</span>
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                      d="M5 10l7-7m0 0l7 7m-7-7v18"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <!-- Wave Chart -->
-              <svg
-                class="w-full h-24"
-                viewBox="0 0 300 80"
-                preserveAspectRatio="none"
-              >
-                <defs>
-                  <linearGradient
-                    id="greenGradient1"
-                    x1="0%"
-                    y1="0%"
-                    x2="0%"
-                    y2="100%"
-                  >
-                    <stop
-                      offset="0%"
-                      style="stop-color: #7cc991; stop-opacity: 0.6"
-                    />
-                    <stop
-                      offset="100%"
-                      style="stop-color: #7cc991; stop-opacity: 0.1"
-                    />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M0,45 Q30,20 60,35 T120,30 T180,25 T240,35 T300,50 L300,80 L0,80 Z"
-                  fill="url(#greenGradient1)"
-                />
-                <path
-                  d="M0,45 Q30,20 60,35 T120,30 T180,25 T240,35 T300,50"
-                  fill="none"
-                  stroke="#4a9d5f"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-            <!-- Bottom Row -->
-
-            <!-- Heat Trend Card -->
-            <div class="bg-gray-200 rounded-3xl p-6 shadow-lg">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-xl text-gray-900">Heat Trend</h3>
-                <button class="text-gray-600 hover:text-gray-900">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <circle cx="10" cy="4" r="1.5" />
-                    <circle cx="10" cy="10" r="1.5" />
-                    <circle cx="10" cy="16" r="1.5" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="flex items-center justify-between mb-4">
-                <div class="text-4xl font-bold text-gray-900">174</div>
-                <div class="flex items-center gap-1 text-[#1e3a5f] font-bold">
-                  <span class="text-xl">17%</span>
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                      d="M5 10l7-7m0 0l7 7m-7-7v18"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <!-- Wave Chart -->
-              <svg
-                class="w-full h-24"
-                viewBox="0 0 300 80"
-                preserveAspectRatio="none"
-              >
-                <defs>
-                  <linearGradient
-                    id="blueGradient2"
-                    x1="0%"
-                    y1="0%"
-                    x2="0%"
-                    y2="100%"
-                  >
-                    <stop
-                      offset="0%"
-                      style="stop-color: #5b7fa8; stop-opacity: 0.6"
-                    />
-                    <stop
-                      offset="100%"
-                      style="stop-color: #5b7fa8; stop-opacity: 0.1"
-                    />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M0,40 Q40,20 80,30 T160,25 T240,35 T300,45 L300,80 L0,80 Z"
-                  fill="url(#blueGradient2)"
-                />
-                <path
-                  d="M0,40 Q40,20 80,30 T160,25 T240,35 T300,45"
-                  fill="none"
-                  stroke="#1e3a5f"
-                  stroke-width="2"
-                />
-              </svg>
+          <!-- Growth Trend Card -->
+          <div class="bg-gray-200 rounded-3xl p-6 shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl text-gray-900">Growth Trend</h3>
+              <button class="text-gray-600 hover:text-gray-900">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <circle cx="10" cy="4" r="1.5" />
+                  <circle cx="10" cy="10" r="1.5" />
+                  <circle cx="10" cy="16" r="1.5" />
+                </svg>
+              </button>
             </div>
 
-            <!-- Growth Trend Card -->
-            <div class="bg-gray-200 rounded-3xl p-6 shadow-lg">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-xl text-gray-900">Growth Trend</h3>
-                <button class="text-gray-600 hover:text-gray-900">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <circle cx="10" cy="4" r="1.5" />
-                    <circle cx="10" cy="10" r="1.5" />
-                    <circle cx="10" cy="16" r="1.5" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="flex items-center justify-between mb-4">
-                <div class="text-4xl font-bold text-gray-900">149</div>
-                <div class="flex items-center gap-1 text-[#4a9d5f] font-bold">
-                  <span class="text-xl">25%</span>
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                      d="M5 10l7-7m0 0l7 7m-7-7v18"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <!-- Wave Chart -->
-              <svg
-                class="w-full h-24"
-                viewBox="0 0 300 80"
-                preserveAspectRatio="none"
-              >
-                <defs>
-                  <linearGradient
-                    id="greenGradient2"
-                    x1="0%"
-                    y1="0%"
-                    x2="0%"
-                    y2="100%"
-                  >
-                    <stop
-                      offset="0%"
-                      style="stop-color: #a8c9ad; stop-opacity: 0.6"
-                    />
-                    <stop
-                      offset="100%"
-                      style="stop-color: #a8c9ad; stop-opacity: 0.1"
-                    />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M0,35 Q50,20 100,30 T200,35 T300,50 L300,80 L0,80 Z"
-                  fill="url(#greenGradient2)"
-                />
-                <path
-                  d="M0,35 Q50,20 100,30 T200,35 T300,50"
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-4xl font-bold text-gray-900">149</div>
+              <div class="flex items-center gap-1 text-[#4a9d5f] font-bold">
+                <span class="text-xl">25%</span>
+                <svg
+                  class="w-5 h-5"
                   fill="none"
-                  stroke="#4a9d5f"
-                  stroke-width="2"
-                />
-              </svg>
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  />
+                </svg>
+              </div>
             </div>
+
+            <!-- Wave Chart -->
+            <svg
+              class="w-full h-24"
+              viewBox="0 0 300 80"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <linearGradient
+                  id="greenGradient2"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #a8c9ad; stop-opacity: 0.6"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #a8c9ad; stop-opacity: 0.1"
+                  />
+                </linearGradient>
+              </defs>
+              <path
+                d="M0,35 Q50,20 100,30 T200,35 T300,50 L300,80 L0,80 Z"
+                fill="url(#greenGradient2)"
+              />
+              <path
+                d="M0,35 Q50,20 100,30 T200,35 T300,50"
+                fill="none"
+                stroke="#4a9d5f"
+                stroke-width="2"
+              />
+            </svg>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Pricing -->
-    <section class="bg-[#F1F1F1] px-6 py-12 md:py-16">
-      <div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <section class="bg-[#F1F1F1] py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <!-- Free Plan -->
           <div
-            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col h-full  justify-between"
+            class="bg-[#048C4C] rounded-xl p-8 text-white shadow-lg flex flex-col h-full justify-between"
           >
             <h2 class="text-2xl font-bold mb-2">Free</h2>
             <p class="text-gray-200 mb-6 text-sm">
@@ -1859,7 +2203,9 @@
               <span class="text-gray-200 text-lg">/ month</span>
             </div>
 
-            <div class="border-t flex flex-col justify-between h-full border-green-600 pt-6 mb-6">
+            <div
+              class="border-t flex flex-col justify-between h-full border-green-600 pt-6 mb-6"
+            >
               <h3 class="text-xl font-semibold mb-4">What's included</h3>
               <ul class="text-gray-200 space-y-2 text-sm">
                 <li class="flex items-center gap-2">
@@ -1998,7 +2344,9 @@
               </p>
             </div>
 
-            <div class="border-t flex flex-col justify-between h-full border-green-600 pt-6 mb-6">
+            <div
+              class="border-t flex flex-col justify-between h-full border-green-600 pt-6 mb-6"
+            >
               <h3 class="text-xl font-semibold mb-4">What's included</h3>
               <ul class="text-gray-200 space-y-2 text-sm">
                 <li class="flex items-center gap-2">
@@ -2121,7 +2469,9 @@
                 $144 billed annually
               </p>
             </div>
-            <div class="border-t flex flex-col justify-between h-full border-green-600 pt-6 mb-6">
+            <div
+              class="border-t flex flex-col justify-between h-full border-green-600 pt-6 mb-6"
+            >
               <h3 class="text-xl font-semibold mb-4">What's included</h3>
               <ul class="text-gray-200 space-y-2 text-sm">
                 <li class="flex items-center gap-2">
@@ -2230,7 +2580,9 @@
 
       <!-- Logos Grid -->
       <div class="">
-        <div class="flex flex-wrap lg:flex-nowrap max-w-3xl items-center justify-center mx-auto gap-8 sm:gap-16">
+        <div
+          class="flex flex-wrap lg:flex-nowrap max-w-3xl items-center justify-center mx-auto gap-8 sm:gap-16"
+        >
           <img
             src="./assets/logos/mihovu.svg"
             alt="Brand 1"
@@ -2247,7 +2599,9 @@
             class="object-contain"
           />
         </div>
-        <div class="flex flex-wrap lg:flex-nowrap max-w-3xl items-center justify-center mx-auto gap-8 sm:gap-16">
+        <div
+          class="flex flex-wrap lg:flex-nowrap max-w-3xl items-center justify-center mx-auto gap-8 sm:gap-16"
+        >
           <img
             src="./assets/logos/fedex.svg"
             alt="Brand 1"
@@ -2269,7 +2623,9 @@
             class="object-contain"
           />
         </div>
-        <div class="flex flex-wrap lg:flex-nowrap max-w-3xl items-center justify-center mx-auto gap-8 sm:gap-16">
+        <div
+          class="flex flex-wrap lg:flex-nowrap max-w-3xl items-center justify-center mx-auto gap-8 sm:gap-16"
+        >
           <img
             src="./assets/logos/purolator.svg"
             alt="Brand 1"
@@ -2286,7 +2642,7 @@
 
     <!-- Foreign Trade -->
     <div class="bg-[#F1F1F1]">
-      <div class="max-w-7xl mx-auto px-4 py-16">
+      <div class="max-w-7xl mx-auto px-6 py-16">
         <!-- Header -->
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-light text-[#04275E] mb-3">
@@ -2300,7 +2656,9 @@
         </div>
 
         <!-- Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-10">
+        <div
+          class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 gap-y-10"
+        >
           <!-- Card 1: Leads Central -->
           <div
             class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-center items-center text-center hover:shadow-xl transition-shadow duration-300"
@@ -2626,18 +2984,18 @@
 
     <!-- Form -->
     <section
-      class="bg-[#B3B3B3]/50 bg-[url('./assets/zoomed-map.png')] bg-cover bg-center bg-no-repeat py-12 md:py-16 lg:py-20
- relative overflow-hidden"
+      class="bg-[#B3B3B3]/50 bg-[url('./assets/zoomed-map.png')] bg-cover bg-center bg-no-repeat py-12 md:py-16 lg:py-20 relative overflow-hidden"
     >
       <div
-        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8 md:gap-10 px-6 lg:px-8
-"
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8 md:gap-10 px-6 lg:px-8"
       >
         <!-- Left Content -->
-      <div class="space-y-4 md:space-y-6 order-2 lg:order-1">
+        <div class="space-y-4 md:space-y-6 order-2 lg:order-1">
           <p class="text-[#082D38] font-medium">Our Location</p>
 
-<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#082D38] leading-tight">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#082D38] leading-tight"
+          >
             Leader In Supply Chain<br class="hidden sm:block" />
             Storage & Distribution
           </h2>
@@ -2645,7 +3003,9 @@
           <!-- Divider Line -->
           <img src="./assets/blue.svg" alt="" />
 
-<p class="text-gray-600 leading-relaxed text-sm md:text-base max-w-md">
+          <p
+            class="text-gray-600 leading-relaxed text-sm md:text-base max-w-md"
+          >
             Erat mollis iaculis diam ornare nisl. Bibendum mauris vel
             suspendisse posuere posuere montes. Non porttitor condimentum porta
             malesuada.
@@ -2653,9 +3013,7 @@
 
           <!-- Form -->
           <form class="space-y-3 md:space-y-4 pt-2">
-
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-
               <input
                 type="text"
                 placeholder="Enter Your Name"
@@ -2669,7 +3027,6 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-
               <select
                 class="border rounded-md p-3 w-full text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#048C4C]"
               >
@@ -2689,9 +3046,10 @@
             ></textarea>
 
             <div class="pt-2 md:pt-4">
-
-              <button type="submit" class="w-full sm:w-auto inline-block bg-[#04275E] text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base shadow-[3px_3px_0px_#048C4C] md:shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 hover:shadow-[2px_2px_0px_#048C4C] active:shadow-[1px_1px_0px_#048C4C] active:translate-x-0.5 active:translate-y-0.5 transition-all duration-200">
-
+              <button
+                type="submit"
+                class="w-full sm:w-auto inline-block bg-[#04275E] text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base shadow-[3px_3px_0px_#048C4C] md:shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 hover:shadow-[2px_2px_0px_#048C4C] active:shadow-[1px_1px_0px_#048C4C] active:translate-x-0.5 active:translate-y-0.5 transition-all duration-200"
+              >
                 Request Quote
               </button>
             </div>
@@ -2699,31 +3057,39 @@
         </div>
 
         <!-- Right Image -->
-      <div class="flex justify-center items-center relative order-1 lg:order-2">
-        <div class="w-full max-w-md lg:max-w-full">
-          <img
-            src="./assets/man.png"
-            alt="Saudi man with laptop"
-class="w-full h-auto object-contain rounded-lg lg:rounded-none"          />
-        </div>
+        <div
+          class="flex justify-center items-center relative order-1 lg:order-2"
+        >
+          <div class="w-full max-w-md lg:max-w-full">
+            <img
+              src="./assets/man.png"
+              alt="Saudi man with laptop"
+              class="w-full h-auto object-contain rounded-lg lg:rounded-none"
+            />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Us -->
-<section class="relative text-white pt-8 md:pt-12 lg:pt-16 overflow-hidden">
+    <section class="relative text-white pt-8 md:pt-12 lg:pt-16 overflow-hidden">
       <!-- Background image -->
       <div
         class="absolute inset-0 bg-[url('./assets/truck.png')] bg-cover bg-center"
       ></div>
 
       <!-- Form -->
-      <div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-6 md:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8">
-
+      <div
+        class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-6 md:gap-8 lg:gap-10 px-6"
+      >
         <!-- Left Side -->
         <div class="space-y-4 md:space-y-6 lg:col-span-6">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-            <h3 class="text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
+          >
+            <h3
+              class="text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium"
+            >
               Subscribe Logi ...
             </h3>
             <div
@@ -2757,17 +3123,23 @@ class="w-full h-auto object-contain rounded-lg lg:rounded-none"          />
           <!-- Divider Line -->
           <img src="./assets/blue.svg" alt="" />
 
-          <div class="border-t border-gray-500/50  pt-4 md:pt-6">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+          <div class="border-t border-gray-500/50 pt-4 md:pt-6">
+            <div
+              class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4"
+            >
               <img src="./assets/logo.png" alt="Logo" class="h-8 md:h-10" />
-              <div class="flex flex-wrap gap-3 sm:gap-4 md:gap-6 text-sm md:text-base">
+              <div
+                class="flex flex-wrap gap-3 sm:gap-4 md:gap-6 text-sm md:text-base"
+              >
                 <a class="" href="#">About Us</a>
                 <a class="" href="#">Services & Tools</a>
                 <a class="" href="#">Leads Central</a>
               </div>
             </div>
 
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mt-4">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mt-4"
+            >
               We Ship Worldwide <br class="hidden sm:block" />
               Without Borders
             </h2>
@@ -2786,28 +3158,30 @@ class="w-full h-auto object-contain rounded-lg lg:rounded-none"          />
           class="bg-white text-[#0C203B] rounded-sm shadow-xl p-4 sm:p-6 md:p-8 space-y-4 md:space-y-6 lg:col-span-4"
         >
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-
             <div>
-              <label class="block text-xs md:text-sm font-semibold mb-1">Your Name:</label>
+              <label class="block text-xs md:text-sm font-semibold mb-1"
+                >Your Name:</label
+              >
               <input
                 type="text"
                 placeholder="Name"
-                 class="border-b border-gray-300 w-full p-1 md:p-2 text-sm md:text-base focus:outline-none focus:border-[#048C4C] transition"
+                class="border-b border-gray-300 w-full p-1 md:p-2 text-sm md:text-base focus:outline-none focus:border-[#048C4C] transition"
               />
             </div>
 
             <div>
-              <label class="block text-xs md:text-sm font-semibold mb-1">Phone No:</label>
+              <label class="block text-xs md:text-sm font-semibold mb-1"
+                >Phone No:</label
+              >
               <input
                 type="text"
                 placeholder="Mobile No"
-                 class="border-b border-gray-300 w-full p-1 md:p-2 text-sm md:text-base focus:outline-none focus:border-[#048C4C] transition"
+                class="border-b border-gray-300 w-full p-1 md:p-2 text-sm md:text-base focus:outline-none focus:border-[#048C4C] transition"
               />
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-
             <div>
               <label class="block text-xs md:text-sm font-semibold mb-1"
                 >Freight Type:</label
@@ -2822,17 +3196,21 @@ class="w-full h-auto object-contain rounded-lg lg:rounded-none"          />
             </div>
 
             <div>
-              <label class="block text-xs md:text-sm font-semibold mb-1">Load:</label>
+              <label class="block text-xs md:text-sm font-semibold mb-1"
+                >Load:</label
+              >
               <input
                 type="text"
                 placeholder="Road"
-                 class="border-b border-gray-300 w-full p-1 md:p-2 text-sm md:text-base focus:outline-none focus:border-[#048C4C] transition"
+                class="border-b border-gray-300 w-full p-1 md:p-2 text-sm md:text-base focus:outline-none focus:border-[#048C4C] transition"
               />
             </div>
           </div>
 
           <div>
-            <label class="block text-xs md:text-sm font-semibold mb-1">Message:</label>
+            <label class="block text-xs md:text-sm font-semibold mb-1"
+              >Message:</label
+            >
             <textarea
               rows="3"
               placeholder="Your Message"
@@ -2841,8 +3219,10 @@ class="w-full h-auto object-contain rounded-lg lg:rounded-none"          />
           </div>
 
           <div class="pt-2 md:pt-4">
-              <button type="submit" class="w-full sm:w-auto inline-block bg-[#04275E] text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base shadow-[3px_3px_0px_#048C4C] md:shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 hover:shadow-[2px_2px_0px_#048C4C] active:shadow-[1px_1px_0px_#048C4C] active:translate-x-0.5 active:translate-y-0.5 transition-all duration-200 hover:cursor-pointer">
-
+            <button
+              type="submit"
+              class="w-full sm:w-auto inline-block bg-[#04275E] text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base shadow-[3px_3px_0px_#048C4C] md:shadow-[4px_4px_0px_#048C4C] hover:bg-blue-900 hover:shadow-[2px_2px_0px_#048C4C] active:shadow-[1px_1px_0px_#048C4C] active:translate-x-0.5 active:translate-y-0.5 transition-all duration-200 hover:cursor-pointer"
+            >
               Submit Request
             </button>
           </div>
@@ -2854,7 +3234,9 @@ class="w-full h-auto object-contain rounded-lg lg:rounded-none"          />
       <div
         class="relative max-w-7xl mx-auto mt-6 md:mt-8 lg:mt-10 p-4 sm:p-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-gray-500 text-white"
       >
-        <p class="text-xs sm:text-sm text-gray-400 text-center sm:text-left">All Right Reserved © 2024</p>
+        <p class="text-xs sm:text-sm text-gray-400 text-center sm:text-left">
+          All Right Reserved © 2024
+        </p>
         <div class="flex items-center gap-3 md:gap-4 flex-wrap justify-center">
           <span class="text-xs sm:text-sm text-gray-300">Social Media :</span>
           <a

@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 30rem;
+}
+
 .writing-mode-vertical-lr {
   writing-mode: vertical-lr;
-  
 }
 
 .text-outline-black {
@@ -21,6 +24,6 @@ nav.transparent {
 
 /* Scrolled state with black background */
 nav.scrolled {
-  background-color: rgba(0, 0, 0, 0.50);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
 }
